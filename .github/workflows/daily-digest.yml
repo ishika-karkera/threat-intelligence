@@ -1,0 +1,34 @@
+name: Daily Threat Digest
+
+on:
+  schedule:
+    - cron: '0 8 * * *'
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install feedparser python-dateutil requests pyyaml
+
+      - name: Run digest generator
+        run: python3 generate_digest.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "digest-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add docs/digest.json seen_articles.json
+          git diff --staged --quiet || git commit -m "Update digest $(date +%F)"
+          git push
