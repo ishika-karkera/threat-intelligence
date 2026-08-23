@@ -1,11 +1,29 @@
 {
   "stats": {
     "attacks_tracked": 30,
-    "ttps_identified": 8,
-    "queries_ready": 7,
+    "ttps_identified": 7,
+    "queries_ready": 6,
     "coverage_gaps": 1
   },
   "incidents": [
+    {
+      "source": "The Hacker News",
+      "title": "TikTok Agrees to $400 Million Settlement in U.S. Child Privacy Lawsuit",
+      "summary": "The U.S. Department of Justice (DoJ) announced on Friday that ByteDance-owned TikTok will pay $400 million to settle a 2024 lawsuit accusing the company of violating child privacy laws in the country.",
+      "ttps": []
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "Hackers infect Android car head units with proxy botnet malware",
+      "summary": "A supply-chain attack targeting Android-based car head units is using a legitimate device-update app to spread malware that enlists compromised devices in a proxy botnet or uses them for ad fraud. [..",
+      "ttps": []
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "Named Pipes Under Attack: Securing Windows Interprocess Communication",
+      "summary": "Windows named pipes provide fast interprocess communication, but weak access controls can expose privileged services to untrusted processes. ThreatLocker explains how endpoint verification, command au",
+      "ttps": []
+    },
     {
       "source": "The Hacker News",
       "title": "14 Trojanized npm Packages Drop RedC2 4.0 Linux Backdoor With AI-Assisted C2",
@@ -214,31 +232,6 @@
       "title": "CDN Tsunami Attack Abuses HTTP/3 Translation for Up to 350x DoS Amplification",
       "summary": "Cybersecurity researchers have disclosed two denial-of-service (DoS) attacks that exploit how major content delivery networks (CDNs) convert client-facing HTTP/3 traffic into HTTP/1.1 requests to the ",
       "ttps": []
-    },
-    {
-      "source": "The Hacker News",
-      "title": "Manic Android Malware Exfiltrates Data From Offline Phones via Nearby Infected Devices",
-      "summary": "A new Android threat codenamed Manic has been observed actively targeting Ukrainian banks, government and identity services, and messaging applications, as well as Russian and European financial insti",
-      "ttps": []
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "Hackers poison arrayref Rust crate to push infostealer malware",
-      "summary": "Hackers compromised the maintainer account behind the widely used Rust crate arrayref to introduce malware that executed on developers' systems during compilation. [...]",
-      "ttps": []
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "Critical Elementor Pro bug exposes WordPress sites to RCE attacks",
-      "summary": "A critical vulnerability in the Elementor Pro WordPress plugin could allow attackers to upload executable files for remote code execution on the server. [...]",
-      "ttps": [
-        {
-          "id": "T1190",
-          "name": "Exploit Public-Facing Application",
-          "status": "covered",
-          "query": "source=\"{log_source}\" AND http_status=200 AND uri_path contains \"admin\" AND response_size>10000"
-        }
-      ]
     }
   ]
 }
