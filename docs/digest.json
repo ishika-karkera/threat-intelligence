@@ -8,6 +8,24 @@
   "incidents": [
     {
       "source": "The Hacker News",
+      "title": "UAT-10147 Uses AI to Scale Server Attacks, Deploys SPECTRE With EDR Bypass and Linux Rootkit",
+      "summary": "Cybersecurity researchers have disclosed details of a Chinese-speaking cybercrime group dubbed UAT-10147 that's targeting Windows and Linux web servers globally across the education, media, technology",
+      "ttps": []
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "Microsoft shares temporary fix for Windows 11 gaming issues",
+      "summary": "Microsoft has shared a temporary fix for ongoing\u00a0gaming issues caused by Windows 11\u00a0updates released during the\u00a0August 2026 Patch Tuesday. [...]",
+      "ttps": []
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "ToxicPanda Android malware uses VPN permissions to block Google Play",
+      "summary": "The ToxicPanda Android malware has evolved with new malicious functionality, expanding its targeting to 349 applications and adding support for 167 remote commands. [...]",
+      "ttps": []
+    },
+    {
+      "source": "The Hacker News",
       "title": "TikTok Agrees to $400 Million Settlement in U.S. Child Privacy Lawsuit",
       "summary": "The U.S. Department of Justice (DoJ) announced on Friday that ByteDance-owned TikTok will pay $400 million to settle a 2024 lawsuit accusing the company of violating child privacy laws in the country.",
       "ttps": []
@@ -214,24 +232,6 @@
           "query": "source=\"{log_source}\" AND http_status=200 AND uri_path contains \"admin\" AND response_size>10000"
         }
       ]
-    },
-    {
-      "source": "The Hacker News",
-      "title": "Zombie Card Attack Can Revive Expired Visa Cards for Contactless Payments",
-      "summary": "Researchers at the University of Massachusetts Amherst have demonstrated an attack that revives expired Visa contactless credit cards for real in-store purchases by rewriting the expiration date a poi",
-      "ttps": []
-    },
-    {
-      "source": "The Hacker News",
-      "title": "Why \"Shady AI\" is Security's Next Big Governance Problem",
-      "summary": "In March 2026, an internal AI agent at Meta triggered a \u201cSev 1\u201d incident after sensitive company and user data was exposed to employees who weren\u2019t authorized to access it.&nbsp;\n\nThe incident began w",
-      "ttps": []
-    },
-    {
-      "source": "The Hacker News",
-      "title": "CDN Tsunami Attack Abuses HTTP/3 Translation for Up to 350x DoS Amplification",
-      "summary": "Cybersecurity researchers have disclosed two denial-of-service (DoS) attacks that exploit how major content delivery networks (CDNs) convert client-facing HTTP/3 traffic into HTTP/1.1 requests to the ",
-      "ttps": []
     }
   ]
 }
