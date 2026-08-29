@@ -1,11 +1,30 @@
 {
   "stats": {
     "attacks_tracked": 30,
-    "ttps_identified": 8,
-    "queries_ready": 7,
+    "ttps_identified": 9,
+    "queries_ready": 8,
     "coverage_gaps": 1
   },
   "incidents": [
+    {
+      "source": "The Hacker News",
+      "title": "Berlin Refuses to Pay Hackers Who Stole Data From the City's State Network",
+      "summary": "Berlin's state government has confirmed that it is the target of an extortion attempt following the August compromise of the city's state administrative network, and said it will not meet the extortio",
+      "ttps": []
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "McKesson discloses breach after ShinyHunters claims patient data theft",
+      "summary": "Healthcare and pharmaceutical distribution giant McKesson has disclosed a cybersecurity incident involving unauthorized access to third-party applications and data theft, with the ShinyHunters extorti",
+      "ttps": [
+        {
+          "id": "T1041",
+          "name": "Exfiltration Over C2 Channel",
+          "status": "covered",
+          "query": "source=\"{log_source}\" AND direction=\"outbound\" AND bytes_out>100000000 AND dest_reputation=\"unknown\""
+        }
+      ]
+    },
     {
       "source": "The Hacker News",
       "title": "Cosmos EVM Flaw Exploited After Cosmos Labs Knew Every Blockchain Running It Was Vulnerable",
@@ -228,18 +247,6 @@
       "source": "The Hacker News",
       "title": "Unpatched Kaltura mwEmbed Flaws Could Let Remote Attackers Read Files and Run Code",
       "summary": "The CERT Coordination Center (CERT/CC) has disclosed two unpatched vulnerabilities in Kaltura's HTML5 video player library that allow a remote, unauthenticated attacker to read arbitrary files from a ",
-      "ttps": []
-    },
-    {
-      "source": "The Hacker News",
-      "title": "Imagine the SOC Without a Queue: From Alert Backlog to AI Hypothesis Engine",
-      "summary": "The SOC we've always known was built around a model that guarantees most of the alert queue will never receive analyst review. There's never time. In a traditional SOC, the typical progression follows",
-      "ttps": []
-    },
-    {
-      "source": "The Hacker News",
-      "title": "Claude Opus 4.6 Bypasses Gym Booking Limit, Cancels Other Users' Reservations in Tests",
-      "summary": "Aikido Security has published research that recreates the Australian gym-booking incident in a synthetic environment, finding that Claude Opus 4.6, running on the OpenClaw agent harness, exploited a c",
       "ttps": []
     }
   ]
