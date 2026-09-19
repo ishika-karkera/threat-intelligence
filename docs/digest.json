@@ -1,11 +1,134 @@
 {
   "stats": {
     "attacks_tracked": 30,
-    "ttps_identified": 7,
+    "ttps_identified": 6,
     "queries_ready": 5,
-    "coverage_gaps": 2
+    "coverage_gaps": 1
   },
   "incidents": [
+    {
+      "source": "The Hacker News",
+      "title": "CrowdSec Says TanStack npm Attack Led to Copy of 170 Private GitHub Repositories",
+      "summary": "An attacker copied about 170 of CrowdSec's private GitHub repositories on May 22 using the account of an employee who had just left, CrowdSec&nbsp;said on September 18.\n\nThe French security company ha",
+      "ttps": []
+    },
+    {
+      "source": "The Hacker News",
+      "title": "CISA Flags Three Linux Kernel Vulnerabilities Exploited in the Wild",
+      "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Friday added three security flaws impacting the Linux kernel to its Known Exploited Vulnerabilities (KEV) catalog, citing evidence o",
+      "ttps": []
+    },
+    {
+      "source": "The Hacker News",
+      "title": "Public Exploits Released for Four Linux Kernel Flaws That Enable Local Root",
+      "summary": "A security researcher has released working exploit code for four Linux kernel flaws that each let a local user gain root, the highest level of access on a machine.\n\nKernel maintainers have fixed all f",
+      "ttps": []
+    },
+    {
+      "source": "The Hacker News",
+      "title": "New WordPress Click2Shell Flaw Forces Theme Installs, Can Chain to Code Execution",
+      "summary": "WordPress today released patches to fix a new set of vulnerabilities in its core software, one of which could allow a crafted web link, opened by a logged-in administrator, to install a theme from the",
+      "ttps": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "status": "covered",
+          "query": "source=\"{log_source}\" AND http_status=200 AND uri_path contains \"admin\" AND response_size>10000"
+        }
+      ]
+    },
+    {
+      "source": "The Hacker News",
+      "title": "Transparent Tribe Deploys New Rust Backdoor Using Private GitHub Repositories for C2",
+      "summary": "The Pakistan-aligned threat group tracked as Transparent Tribe (aka APT36 and Earth Karkaddan) has been attributed to a fresh set of cyber attacks targeting government and defense entities in India an",
+      "ttps": []
+    },
+    {
+      "source": "The Hacker News",
+      "title": "Microsoft Patches CVSS 10.0 Azure AI Foundry Flaw Enabling Unauthorized Privilege Escalation",
+      "summary": "Microsoft has released fixes for a maximum-severity security flaw in Azure AI Foundry that could be exploited to achieve privilege escalation. No customer action is required.\n\nThe vulnerability, track",
+      "ttps": []
+    },
+    {
+      "source": "The Hacker News",
+      "title": "An Abandoned CDN Domain Was Re-Registered. Thousands of Sites Still Call It.",
+      "summary": "In July 2025, someone registered a domain that used to belong to a content delivery network.&nbsp; The CDN had been wound down years earlier, and the domain it served assets from was allowed to expire",
+      "ttps": []
+    },
+    {
+      "source": "The Hacker News",
+      "title": "Plugin4Shell Lets Repository Owners Swap Pinned Plugin Code Across Four AI Coding Agents",
+      "summary": "A flaw in four widely used AI coding agents lets someone who controls a plugin's code repository swap the plugin an agent installs for a malicious one, even when the agent locked that plugin to a spec",
+      "ttps": []
+    },
+    {
+      "source": "The Hacker News",
+      "title": "WeaselBiscuit Stealer Spreads via 13 npm Packages to Harvest Chrome Extension Storage",
+      "summary": "Cybersecurity researchers have discovered a cluster of 13 npm packages that have been found to deliver a previously undocumented JavaScript stealer codenamed WeaselBiscuit.\n\nThe new malware family, pe",
+      "ttps": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "status": "covered",
+          "query": "source=\"{log_source}\" AND http_status=200 AND uri_path contains \"admin\" AND response_size>10000"
+        }
+      ]
+    },
+    {
+      "source": "The Hacker News",
+      "title": "Claimed Bug Bounty Hunter Likely Used LLM to Build PhantomRaven npm Stealer",
+      "summary": "A financially motivated threat actor has been linked to the development and distribution of a JavaScript (JS)-based information stealer known as PhantomRaven via the npm package registry.\n\n\"The develo",
+      "ttps": []
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "Gyazo server flaw exploited to steal 23.6 million user records",
+      "summary": "The Gyazo image-sharing platform has confirmed it suffered a data breach after hackers exploited a server vulnerability that allowed them to steal 23.6\u00a0million user records. [...]",
+      "ttps": []
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "Fake LastPass Authenticator GitHub repos push new Rapuncel infostealer",
+      "summary": "An ongoing malware campaign uses SEO-optimized GitHub repositories to impersonate well-known software firms to push a previously undocumented information stealer called Rapuncel. [...]",
+      "ttps": []
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "Secure enterprise sharing with access reviews for Microsoft 365",
+      "summary": "Microsoft 365 makes sharing files easy, but access can remain long after its original purpose has ended, leaving organizations with little visibility into who can still reach sensitive data. tenfold S",
+      "ttps": []
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "Microsoft Teams will let admins block custom file extensions",
+      "summary": "Microsoft Teams will soon let administrators tweak the list of file extensions commonly associated with security threats to meet\u00a0their company's security requirements. [...]",
+      "ttps": []
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "Webinar: Which Google Workspace security controls actually matter?",
+      "summary": "Fast-growing companies face countless recommendations for securing Google Workspace, but not every control provides the same value. This webinar examines real-world breaches to explore which security ",
+      "ttps": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "status": "covered",
+          "query": "source=\"{log_source}\" AND http_status=200 AND uri_path contains \"admin\" AND response_size>10000"
+        }
+      ]
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "Microsoft fixes bug behind \u2018Defender Antivirus is turned off\u2019 alerts",
+      "summary": "Microsoft has resolved a known issue that causes incorrect alerts warning that Defender Antivirus was turned off after installing recent updates. [...]",
+      "ttps": []
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "New Check Point flaw lets hackers execute code with root privileges",
+      "summary": "Check Point Software has released security updates to address a critical vulnerability that can let attackers execute code with root privileges on management systems. [...]",
+      "ttps": []
+    },
     {
       "source": "The Hacker News",
       "title": "RatHat Android Malware Abuses ADB to Retain Shell Access After Uninstall",
@@ -103,136 +226,6 @@
       "source": "The Hacker News",
       "title": "Cisco Warns of New Zero-Day ISE Auth Bypass (CVSS 10.0) Exploited in Active Attacks",
       "summary": "Cisco has warned of a fresh maximum-severity security flaw impacting Identity Services Engine (ISE) that has come under active exploitation.\n\nThe vulnerability, tracked as CVE-2026-76460 (CVSS score: ",
-      "ttps": []
-    },
-    {
-      "source": "The Hacker News",
-      "title": "U.S. Seizes NightmareStresser Domains Linked to Hundreds of Thousands of DDoS Attacks",
-      "summary": "The U.S. Department of Justice (DoJ) on Tuesday announced the court-authorized seizure of internet domains associated with a distributed denial-of-service (DDoS)-for-hire service known as NightmareStr",
-      "ttps": []
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "Microsoft fixes broken copy and paste for Excel 2016 users",
-      "summary": "Microsoft has fixed a known issue that causes copy-and-paste failures for some Excel users after installing the September 2026 KB5002914 security update. [...]",
-      "ttps": []
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "New RatHat Android malware uses AI to automate device control",
-      "summary": "A new Android malware called RatHat has been discovered, targeting users with an AI-powered subsystem that helps operators remotely navigate compromised devices. [...]",
-      "ttps": []
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "OpenAI details more cases of AI agents taking unauthorized actions",
-      "summary": "OpenAI has presented new examples of what they call \"AI model misalignment\"\u00a0from the past six months,\u00a0including unauthorized file uploads, following self-generated instructions, hiding mistakes, and l",
-      "ttps": []
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "Brevo supply-chain attack injected ClickFix scripts on customer sites",
-      "summary": "Brevo confirmed that attackers stole a Cloudflare API key and used it to inject malicious ClickFix scripts into its websites and JavaScript files embedded on customer sites to distribute malware. [...",
-      "ttps": []
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "What Recent AI-Powered Attacks Mean for Your Identity Security",
-      "summary": "AI is making credential theft faster and easier to scale, giving attackers more opportunities to abuse valid identities. Specops explains why identity security must go beyond successful authentication",
-      "ttps": []
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "Windows 11 24H2 Home and Pro reach end of support in October",
-      "summary": "Microsoft reminded customers this week that devices running Windows 11 24H2 Home and Pro editions will stop receiving updates next month. [...]",
-      "ttps": []
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "US takes down NightmareStresser DDoS-for-hire platform",
-      "summary": "The U.S. Federal Bureau of Investigation (FBI) seized the domains used by NightmareStresser, one of the world's longest-running distributed denial-of-service (DDoS) platforms. [...]",
-      "ttps": []
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "Chinese hackers use SparroWocky malware in govt espionage attacks",
-      "summary": "The China-linked espionage group FamousSparrow has been using a new backdoor named SparroWocky in attacks on government organizations in Latin America. [...]",
-      "ttps": []
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "Microsoft shares workaround for Windows domain login issues",
-      "summary": "Microsoft shared a temporary fix on Wednesday for\u00a0a known issue that prevents Windows 11 users from logging in with valid domain credentials after installing the September 2026 security updates. [...]",
-      "ttps": []
-    },
-    {
-      "source": "The Hacker News",
-      "title": "Attackers Exploit Issabel Framework Flaw Enabling Unauthenticated OS Command Execution",
-      "summary": "A critical security flaw in Issabel Framework, a web-based framework for the open-source unified communications PBX software, has come under active exploitation.\n\nThe vulnerability in question is CVE-",
-      "ttps": [
-        {
-          "id": "T1190",
-          "name": "Exploit Public-Facing Application",
-          "status": "covered",
-          "query": "source=\"{log_source}\" AND http_status=200 AND uri_path contains \"admin\" AND response_size>10000"
-        }
-      ]
-    },
-    {
-      "source": "The Hacker News",
-      "title": "Three Threat Groups Target Russian Enterprises With Backdoors, Ransomware, and Wipers",
-      "summary": "Enterprises in Russia have emerged as the target of three threat activity clusters tracked as NightEagle, Hacking Cat, and Toy Ghouls, according to multiple reports from Kaspersky.\n\nThe cybersecurity ",
-      "ttps": [
-        {
-          "id": "T1486",
-          "name": "Data Encrypted for Impact (Ransomware)",
-          "status": "covered",
-          "query": "source=\"{log_source}\" AND event_type=\"file_modify\" AND file_extension in (\".locked\",\".encrypted\") AND file_count_per_min>50"
-        }
-      ]
-    },
-    {
-      "source": "The Hacker News",
-      "title": "One Extension Could Hijack AI Assistants Across Chrome, Comet, Edge, Opera Neon and Claude",
-      "summary": "Security researchers at&nbsp;Forever Security&nbsp;have shown that one ordinary browser extension could take control of the AI assistants built into five Chromium-based products: Gemini Live in Chrome",
-      "ttps": []
-    },
-    {
-      "source": "The Hacker News",
-      "title": "Attacker Hijacks AI Coding Assistant Session, Spreads Shai-Hulud Across About 100 Repositories",
-      "summary": "Mandiant says an attacker hijacked an active AI coding-assistant session at an unnamed software-as-a-service provider and later spread&nbsp;Shai-Hulud&nbsp;across about 100 internal code repositories.",
-      "ttps": [
-        {
-          "id": "T1190",
-          "name": "Exploit Public-Facing Application",
-          "status": "covered",
-          "query": "source=\"{log_source}\" AND http_status=200 AND uri_path contains \"admin\" AND response_size>10000"
-        }
-      ]
-    },
-    {
-      "source": "The Hacker News",
-      "title": "Parallels Desktop Flaw Lets Non-Admin Mac Users Gain Root, but Intel Macs Can't Install Fix",
-      "summary": "Parallels Desktop for Mac has a flaw that lets an ordinary local account run code as root, the highest level of access on a Mac, software company JFrog said this week.\n\nThe attack needs code already r",
-      "ttps": []
-    },
-    {
-      "source": "The Hacker News",
-      "title": "N0va Phishkit Targets US and EU Businesses: A New Challenge for Identity Security",
-      "summary": "N0va is targeting organizations across North America and Europe with phishing campaigns that impersonate trusted services and abuse legitimate authentication flows. Successful attacks can give threat ",
-      "ttps": [
-        {
-          "id": "T1566",
-          "name": "Unknown",
-          "status": "gap",
-          "query": ""
-        }
-      ]
-    },
-    {
-      "source": "The Hacker News",
-      "title": "Google Patches Pixel Modem Flaw Amid Signs of Limited Targeted Exploitation",
-      "summary": "Google has disclosed that a high-severity security flaw in its Pixel Cellular Modem has come under exploitation in the wild.\n\nThe vulnerability, tracked as CVE-2026-58704 (CVSS score: 8.0), is a privi",
       "ttps": []
     }
   ]
