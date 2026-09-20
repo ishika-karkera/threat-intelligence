@@ -1,11 +1,99 @@
 {
   "stats": {
     "attacks_tracked": 30,
-    "ttps_identified": 6,
-    "queries_ready": 5,
+    "ttps_identified": 8,
+    "queries_ready": 7,
     "coverage_gaps": 1
   },
   "incidents": [
+    {
+      "source": "The Hacker News",
+      "title": "Claude Opus 5 Helped Researchers Take Over OpenAI Staff Accounts via Chained Flaws",
+      "summary": "Three researchers at the security firm&nbsp;Hacktron&nbsp;used Anthropic's Claude Opus 5 to chain two flaws and take over the ChatGPT and Codex accounts of several OpenAI employees, then reach an inte",
+      "ttps": []
+    },
+    {
+      "source": "The Hacker News",
+      "title": "Identity Visibility in 2026: The Foundation of Identity Security",
+      "summary": "Identity visibility is a starting point for modern identity security, because stolen and misused credentials are among the most frequently reported initial access vectors in breach research, including",
+      "ttps": []
+    },
+    {
+      "source": "The Hacker News",
+      "title": "SolarWinds Patches ARM Hard-Coded Key Flaw Enabling Unauthenticated RCE",
+      "summary": "SolarWinds has released security updates to address a high-severity flaw in Access Rights Manager (ARM) that, if successfully exploited, could lead to an unauthenticated remote code execution vulnerab",
+      "ttps": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "status": "covered",
+          "query": "source=\"{log_source}\" AND http_status=200 AND uri_path contains \"admin\" AND response_size>10000"
+        }
+      ]
+    },
+    {
+      "source": "The Hacker News",
+      "title": "Critical Pre-Auth RCE in Orkes Conductor Workflow Platform Exploited in the Wild",
+      "summary": "A critical vulnerability impacting Orkes Conductor is being actively exploited in the wild, according to Fortinet.\n\nThe vulnerability in question is CVE-2026-58138 (CVSS v3.1 score: 9.8/CVSS v4 score:",
+      "ttps": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "status": "covered",
+          "query": "source=\"{log_source}\" AND http_status=200 AND uri_path contains \"admin\" AND response_size>10000"
+        }
+      ]
+    },
+    {
+      "source": "The Hacker News",
+      "title": "Google Gemini Broke Into Real Company Systems After Security Test Domain Mix-Up",
+      "summary": "Google's Gemini model has become the latest artificial intelligence (AI) system to access the internet and break into other companies during a cybersecurity evaluation. The development was first repor",
+      "ttps": []
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "Researchers escape OpenAI Codex sandbox to run commands on host",
+      "summary": "Researchers escaped OpenAI's Codex sandbox two ways, one running commands on a developer's machine from its most locked-down mode. OpenAI has patched both. [...]",
+      "ttps": []
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "BragJack attacks hijack AI browser agents through malicious extensions",
+      "summary": "BragJack, a proof-of-concept attack from Forever Security's Gal Weizman, hijacks the AI assistants in Chrome, Edge, Opera Neon, Perplexity Comet, and Claude in Chrome using one malicious extension. Th",
+      "ttps": []
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "North Korean WaterPlum hackers infected 30,000 devices worldwide",
+      "summary": "A joint law enforcement advisory warns that the North Korean hacking group WaterPlum compromised at least 30,000 devices worldwide from December 2025 through July 2026 and transferred more than $10.7 ",
+      "ttps": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "status": "covered",
+          "query": "source=\"{log_source}\" AND http_status=200 AND uri_path contains \"admin\" AND response_size>10000"
+        }
+      ]
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "ShinyHunters hacks Clop leak site, threatens to extort ransomware gang",
+      "summary": "The ShinyHunters extortion gang breached the Clop (aka Cl0p) ransomware operation's data leak site, defacing the Tor site and allegedly stealing server data and the private keys for its onion service.",
+      "ttps": [
+        {
+          "id": "T1486",
+          "name": "Data Encrypted for Impact (Ransomware)",
+          "status": "covered",
+          "query": "source=\"{log_source}\" AND event_type=\"file_modify\" AND file_extension in (\".locked\",\".encrypted\") AND file_count_per_min>50"
+        }
+      ]
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "Viral AI actress' hotline face-scans every caller, watches their mood",
+      "summary": "AI actress Tilly Norwood went viral after glitching into Chinese on Piers Morgan Uncensored last night. Her \"Talking Tilly\" video call service face-scans every caller for an 18+ age check, senses call",
+      "ttps": []
+    },
     {
       "source": "The Hacker News",
       "title": "CrowdSec Says TanStack npm Attack Led to Copy of 170 Private GitHub Repositories",
@@ -152,80 +240,6 @@
       "source": "The Hacker News",
       "title": "ThreatsDay: Self-Rewriting Agents, 800+ Flaws Patched, Insider SIM Swaps and 22 More New Stories",
       "summary": "Attackers keep finding new keys. The funny part is that defenders keep inventing where to store them.\n\nThis week, those keys sit in AI tools, exposed services, old bugs, weak logins, and software sold",
-      "ttps": []
-    },
-    {
-      "source": "The Hacker News",
-      "title": "Critical Docker Sandboxes Flaw Lets Malicious Guest Code Read and Modify macOS Host Files",
-      "summary": "Malicious code running inside a Docker Sandboxes virtual machine on macOS could escape the project directory shared into it and read or change files anywhere else on the host, Docker warns in a&nbsp;s",
-      "ttps": []
-    },
-    {
-      "source": "The Hacker News",
-      "title": "Iran-Linked Handala Hack Tied to HEAVYGRAM Telegram Backdoor That Can Steal Passwords",
-      "summary": "The Iran-linked \"hacktivist\" persona known as Handala Hack has been attributed to a Telegram-based surveillance backdoor called HEAVYGRAM and a Delphi-based utility known as CRUDEEXCLUDE.\n\n\"HEAVYGRAM ",
-      "ttps": []
-    },
-    {
-      "source": "The Hacker News",
-      "title": "Critical Unbound DNSSEC Validator Flaw Could Allow RCE via a Malicious DNS Zone",
-      "summary": "Every release of the Unbound DNS resolver before 1.26.1 has a critical heap overflow in its DNSSEC validator, maintainer NLnet Labs said in an&nbsp;advisory&nbsp;on Wednesday.\n\nAn attacker who control",
-      "ttps": [
-        {
-          "id": "T1190",
-          "name": "Exploit Public-Facing Application",
-          "status": "covered",
-          "query": "source=\"{log_source}\" AND http_status=200 AND uri_path contains \"admin\" AND response_size>10000"
-        }
-      ]
-    },
-    {
-      "source": "The Hacker News",
-      "title": "Can You Prove a New CVE Is Exploitable Before Attackers Do? Learn How in This Webinar",
-      "summary": "A new CVE drops. Your scanner finds it. The severity score looks ugly.\n\nBut that still does not answer the question that matters: Can it actually be exploited in your environment?\n\nMythos-class AI is ",
-      "ttps": []
-    },
-    {
-      "source": "The Hacker News",
-      "title": "CISO's Expert Guide to Agentic Pentesting for Websites",
-      "summary": "Attackers now weaponize new vulnerabilities in about five days (Mandiant, part of Google Cloud). The median organization takes 43 days to patch one (Verizon DBIR 2026). A new free guide explains how a",
-      "ttps": []
-    },
-    {
-      "source": "The Hacker News",
-      "title": "China-Aligned FamousSparrow Deploys SparroWocky Backdoor Across Latin America",
-      "summary": "The China-aligned state-sponsored threat actor known as FamousSparrow has been observed deploying a previously unreported backdoor called SparroWocky in attacks targeting multiple countries in Latin A",
-      "ttps": []
-    },
-    {
-      "source": "The Hacker News",
-      "title": "OpenAI Reveals Six Model Incidents Involving Hidden Failures and Unauthorized Uploads",
-      "summary": "OpenAI on Wednesday disclosed six new instances of \"unexpected or concerning model behavior\" that took place over the past six months, while sharing a new framework for reporting, tracking, investigat",
-      "ttps": []
-    },
-    {
-      "source": "The Hacker News",
-      "title": "BIND 9 Update Fixes 14 Flaws, Including an Unauthenticated Crash Over DNS-over-HTTPS",
-      "summary": "The Internet Systems Consortium (ISC) has released&nbsp;BIND 9.20.29 and 9.21.26&nbsp;to fix fourteen security flaws it&nbsp;disclosed&nbsp;on 16 September in BIND 9, its open-source DNS server softwa",
-      "ttps": [
-        {
-          "id": "T1190",
-          "name": "Exploit Public-Facing Application",
-          "status": "covered",
-          "query": "source=\"{log_source}\" AND http_status=200 AND uri_path contains \"admin\" AND response_size>10000"
-        }
-      ]
-    },
-    {
-      "source": "The Hacker News",
-      "title": "Gyazo Breach Exposes 23.62 Million User Records and 490 Million Image Metadata Records",
-      "summary": "A security breach at Gyazo, Helpfeel's image-sharing service, exposed about 23.62 million user records, including email addresses and password hashes, the Kyoto-based company said in a&nbsp;notice&nbs",
-      "ttps": []
-    },
-    {
-      "source": "The Hacker News",
-      "title": "Cisco Warns of New Zero-Day ISE Auth Bypass (CVSS 10.0) Exploited in Active Attacks",
-      "summary": "Cisco has warned of a fresh maximum-severity security flaw impacting Identity Services Engine (ISE) that has come under active exploitation.\n\nThe vulnerability, tracked as CVE-2026-76460 (CVSS score: ",
       "ttps": []
     }
   ]
