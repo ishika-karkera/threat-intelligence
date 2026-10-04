@@ -1,11 +1,73 @@
 {
   "stats": {
     "attacks_tracked": 30,
-    "ttps_identified": 8,
-    "queries_ready": 8,
-    "coverage_gaps": 0
+    "ttps_identified": 7,
+    "queries_ready": 6,
+    "coverage_gaps": 1
   },
   "incidents": [
+    {
+      "source": "The Hacker News",
+      "title": "ShinyHunters Suspect Rey Reportedly Detained in Jordan, Helping FBI Identify Group Members",
+      "summary": "A suspected member of the ShinyHunters digital extortion group, who goes by the online alias \"Rey,\" has been allegedly detained by authorities in Jordan, Reuters reported, citing three people familiar",
+      "ttps": []
+    },
+    {
+      "source": "The Hacker News",
+      "title": "China-Aligned TA419 Targets U.S. AI Policy Experts With Microsoft AitM Phishing",
+      "summary": "A new China-nexus cyber espionage group known as TA419 has been attributed to multiple credential phishing campaigns targeting artificial intelligence (AI) experts working for U.S. think tanks, univer",
+      "ttps": [
+        {
+          "id": "T1566",
+          "name": "Unknown",
+          "status": "gap",
+          "query": ""
+        }
+      ]
+    },
+    {
+      "source": "The Hacker News",
+      "title": "MI5 Says China\u2019s MSS Funded Research Involving 100+ U.K.-Linked Academics",
+      "summary": "The U.K.'s domestic intelligence and security agency has warned that more than 100 academics have helped China boost its intelligence gathering efforts on behalf of Beijing's state security service.\n\n",
+      "ttps": []
+    },
+    {
+      "source": "The Hacker News",
+      "title": "Warlock Exploits SharePoint Flaws to Disable Security Tools and Deploy Ransomware",
+      "summary": "The suspected China-linked threat actor known as Warlock is still continuing to weaponize Microsoft SharePoint vulnerabilities, likely both old and new, in attacks targeting organizations in Portugues",
+      "ttps": [
+        {
+          "id": "T1486",
+          "name": "Data Encrypted for Impact (Ransomware)",
+          "status": "covered",
+          "query": "source=\"{log_source}\" AND event_type=\"file_modify\" AND file_extension in (\".locked\",\".encrypted\") AND file_count_per_min>50"
+        }
+      ]
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "Anthropic asks Claude users to share voice data for AI model training",
+      "summary": "Anthropic has started asking Claude users to voluntarily share their voice conversations to help train and improve its AI models. [...]",
+      "ttps": []
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "Google Gemini could soon get full access to your Mac\u2019s files, apps and the web",
+      "summary": "Google's Gemini could soon access any file on your macOS device, open apps, browse the web, and perform actions without asking for permission every time. [...]",
+      "ttps": []
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "ShinyHunters hacker reportedly detained in Jordan, aiding FBI",
+      "summary": "A suspected ShinyHunters hacking group member known online as \"Rey\" has reportedly been detained in Jordan and is cooperating with the FBI to help locate other members of the extortion group. [...]",
+      "ttps": []
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "Danish university DTU breach exposes data of up to 200,000 people",
+      "summary": "The Technical University of Denmark (DTU) says information belonging to up to 200,000 users may have been exposed after hackers accessed its identity and access management system and downloaded a larg",
+      "ttps": []
+    },
     {
       "source": "The Hacker News",
       "title": "The State of Cybersecurity in 2026:\u00a0Key Segments, Insights, and Innovations",
@@ -172,74 +234,6 @@
       "title": "How Financial Services Companies Can Modernize Their Software Supply Chain",
       "summary": "Every security leader at a bank, insurer, or asset manager has had a version of this conversation: Security wants to eliminate a class of vulnerabilities. Engineering explains what it would take to up",
       "ttps": []
-    },
-    {
-      "source": "The Hacker News",
-      "title": "OpenAI Disrupts Reasoning Extraction Campaign Linked to Moonshot AI Associates",
-      "summary": "OpenAI on Wednesday said it identified and disrupted a coordinated distillation campaign that was designed to illicitly extract protected reasoning from its artificial intelligence (AI) models.\n\nA \"co",
-      "ttps": []
-    },
-    {
-      "source": "The Hacker News",
-      "title": "CISA Adds Exploited Cisco Catalyst SD-WAN Manager Auth Bypass to KEV",
-      "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Wednesday added a critical authentication bypass flaw impacting Cisco Catalyst SD-WAN Manager to its Known Exploited Vulnerabilities",
-      "ttps": []
-    },
-    {
-      "source": "The Hacker News",
-      "title": "Google Rolls Out Gemini 4 Argon to Trusted Cyber Defenders, Plans Guardrail-Free Version",
-      "summary": "Google on Wednesday announced its latest frontier artificial intelligence (AI) model, Gemini 4 Argon, that it said is being rolled out to a set of trusted cyber defenders through its Fairwind Program.",
-      "ttps": []
-    },
-    {
-      "source": "The Hacker News",
-      "title": "Apple CoreGraphics PoC Emerges as WhatsApp PDF Checks Hint at Possible Delivery Path",
-      "summary": "Security researchers have published the first public proof-of-concept for CVE-2026-86950, an Apple CoreGraphics flaw Apple says may have been used in attacks against specific targeted individuals.\n\nTh",
-      "ttps": []
-    },
-    {
-      "source": "The Hacker News",
-      "title": "Bitget Confirms Third-Party Zero-Day Behind $387.5 Million Cryptocurrency Theft",
-      "summary": "Cryptocurrency exchange Bitget on Wednesday confirmed that attackers who stole $387.5 million last week exploited a zero-day flaw in third-party security products, citing ongoing investigation finding",
-      "ttps": []
-    },
-    {
-      "source": "The Hacker News",
-      "title": "MetaMask Security Incident Prompts Exit of Affected Ethereum Validators",
-      "summary": "MetaMask on Thursday said it's responding to what it described as an \"ongoing security incident\" impacting part of its infrastructure.\n\n\"We are actively addressing and remediating the issue internally",
-      "ttps": []
-    },
-    {
-      "source": "The Hacker News",
-      "title": "Citrix NetScaler Post-Exploitation Payload Creates Superuser, Maps Web Shell to CSS-Like URLs",
-      "summary": "Threat actors have been observed exploiting a critical pre-authentication command injection vulnerability in Citrix NetScaler ADC and NetScaler Gateway to drop web shells and attempt theft of configur",
-      "ttps": [
-        {
-          "id": "T1059",
-          "name": "Command and Scripting Interpreter",
-          "status": "covered",
-          "query": "source=\"{log_source}\" AND process_name in (\"cmd.exe\",\"powershell.exe\",\"bash\") AND parent_process=\"webserver\""
-        }
-      ]
-    },
-    {
-      "source": "The Hacker News",
-      "title": "Attackers Exploit Zimbra Flaw to Deploy Web Shells and Harvest Authentication Secrets",
-      "summary": "Threat actors have weaponized a now-patched security flaw in Zimbra Collaboration Suite (ZCS) to deploy web shells and access mailbox data, according to findings from the Microsoft Security Research t",
-      "ttps": [
-        {
-          "id": "T1190",
-          "name": "Exploit Public-Facing Application",
-          "status": "covered",
-          "query": "source=\"{log_source}\" AND http_status=200 AND uri_path contains \"admin\" AND response_size>10000"
-        },
-        {
-          "id": "T1059",
-          "name": "Command and Scripting Interpreter",
-          "status": "covered",
-          "query": "source=\"{log_source}\" AND process_name in (\"cmd.exe\",\"powershell.exe\",\"bash\") AND parent_process=\"webserver\""
-        }
-      ]
     }
   ]
 }
