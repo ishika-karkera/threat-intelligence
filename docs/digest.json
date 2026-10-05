@@ -1,11 +1,129 @@
 {
   "stats": {
     "attacks_tracked": 30,
-    "ttps_identified": 7,
-    "queries_ready": 6,
+    "ttps_identified": 8,
+    "queries_ready": 7,
     "coverage_gaps": 1
   },
   "incidents": [
+    {
+      "source": "The Hacker News",
+      "title": "\u26a1 Weekly Recap: NetScaler and FortiMail 0-Days, AI Coding Leaks, Spectre v2 and Ransomware Arrests",
+      "summary": "A blank field. A public repo. One reply to an email. A box left exposed. None of this sounds dramatic, which is partly the problem. This week\u2019s threats keep finding leverage in small things that were ",
+      "ttps": [
+        {
+          "id": "T1486",
+          "name": "Data Encrypted for Impact (Ransomware)",
+          "status": "covered",
+          "query": "source=\"{log_source}\" AND event_type=\"file_modify\" AND file_extension in (\".locked\",\".encrypted\") AND file_count_per_min>50"
+        }
+      ]
+    },
+    {
+      "source": "The Hacker News",
+      "title": "The Credential Layer Is Expanding Faster Than Security Teams Can See It",
+      "summary": "Every modern enterprise depends on credentials. This is how humans, systems, and now AI, all connect to data, services, and each other securely. GitGuardian helps secure that credential layer through ",
+      "ttps": []
+    },
+    {
+      "source": "The Hacker News",
+      "title": "Realtek Jungle SDK Exploit Attempts Deliver Cling Botnet With STUN-Based C2",
+      "summary": "Threat actors have been observed attempting to exploit a now-patched critical security flaw impacting the Realtek Jungle software development kit (SDK) to deploy a botnet malware called Cling.\n\n\"Cling",
+      "ttps": []
+    },
+    {
+      "source": "The Hacker News",
+      "title": "Apple Plans Tighter macOS Full Disk Access Controls Over AI Agent Data Access",
+      "summary": "Apple has announced that it's taking steps to tighten controls around a macOS setting called Full Disk Access (FDA) due to security risks posed by artificial intelligence (AI) agents.\n\n\"Some developer",
+      "ttps": []
+    },
+    {
+      "source": "The Hacker News",
+      "title": "Attackers Target Rejetto HFS Flaw That Enables Admin Session Forgery and RCE",
+      "summary": "A critical security flaw impacting Rejetto HTTP File Server (HFS) is witnessing active exploitation attempts, according to VulnCheck.\n\nThe vulnerability in question is CVE-2026-61500 (CVSS score: 9.3)",
+      "ttps": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "status": "covered",
+          "query": "source=\"{log_source}\" AND http_status=200 AND uri_path contains \"admin\" AND response_size>10000"
+        }
+      ]
+    },
+    {
+      "source": "The Hacker News",
+      "title": "New NetScaler Zero-Day Exploited in Targeted Attacks Can Knock SAML Deployments Offline",
+      "summary": "Citrix has released security updates for a high-severity security flaw in NetScaler ADC and Citrix NetScaler Gateway that has been exploited as part of targeted zero-day attacks.\n\nThe vulnerability, t",
+      "ttps": []
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "Denmark population registry data breach affects 8.8 million people",
+      "summary": "Denmark's Central Population Register (CPR) is warning of a data breach that exposed the personal information of approximately 8.8 million registered individuals. [...]",
+      "ttps": []
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "New Dell System Update flaw lets hackers gain root privileges",
+      "summary": "Dell warned customers to patch a critical vulnerability in the System Update (DSU) command-line interface (CLI) deployment tool as soon as possible. [...]",
+      "ttps": []
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "South Korea probes bank breaches amid suspected AI-powered attacks",
+      "summary": "South Korea's Financial Services Commission (FSC) held an emergency meeting following a series of cyberattacks targeting financial institutions in the country. [...]",
+      "ttps": []
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "tenfold CE: Our free Identity Governance tool just got 2 new features",
+      "summary": "tenfold has added shared content governance and real-time event auditing to its free Community Edition for organizations with under 150 users. The new features help teams manage Microsoft 365 sharing ",
+      "ttps": []
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "Alleged dev of Ploutus ATM malware appears in US court after arrest",
+      "summary": "The U.S. Department of Justice has announced the arrest of the alleged developer of Ploutus malware, used to steal millions of dollars in ATM jackpotting attacks across the United States. [...]",
+      "ttps": []
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "OpenAI will show visual ads in ChatGPT while you generate images",
+      "summary": "OpenAI is expanding ads in ChatGPT, and one of the first new formats will show visual ads while you're generating images. [...]",
+      "ttps": []
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "Microsoft: Windows KB5124010 update crashes some games and apps",
+      "summary": "Microsoft confirmed over the weekend that some games and applications using AC-3 (Dolby Digital) audio decoding will crash after installing the September 2026 KB5124010 Windows 11 preview update. [...",
+      "ttps": []
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "Google halts open-source bug bounty program amid AI spam surge",
+      "summary": "Google has now suspended submissions to its Open Source Software Vulnerability Rewards Program (OSS VRP) after being flooded by AI-generated reports. [...]",
+      "ttps": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "status": "covered",
+          "query": "source=\"{log_source}\" AND http_status=200 AND uri_path contains \"admin\" AND response_size>10000"
+        }
+      ]
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "Citrix patches NetScaler SAML zero-day exploited in attacks",
+      "summary": "Citrix has released emergency updates for a new NetScaler denial-of-service vulnerability tracked as CVE-2026-88779 that has been exploited in zero-day attacks, with researchers investigating whether ",
+      "ttps": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "status": "covered",
+          "query": "source=\"{log_source}\" AND http_status=200 AND uri_path contains \"admin\" AND response_size>10000"
+        }
+      ]
+    },
     {
       "source": "The Hacker News",
       "title": "ShinyHunters Suspect Rey Reportedly Detained in Jordan, Helping FBI Identify Group Members",
@@ -123,117 +241,6 @@
           "query": "source=\"{log_source}\" AND http_status=200 AND uri_path contains \"admin\" AND response_size>10000"
         }
       ]
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "US sanctions Tren de Aragua gang members in ATM hacks crackdown",
-      "summary": "The U.S. Treasury Department has sanctioned eight members of the Venezuelan gang Tren de Aragua (TdA) for their role in the theft of millions of dollars in ATM jackpotting attacks across the United St",
-      "ttps": []
-    },
-    {
-      "source": "The Hacker News",
-      "title": "OpenAI Parts Ways With Three Safety Researchers Over Sensitive Information Mishandling",
-      "summary": "OpenAI has parted ways with three members of its safety team after they leaked private information in violation of company policies, The Wall Street Journal reported.\n\n\"We have parted ways with three ",
-      "ttps": []
-    },
-    {
-      "source": "The Hacker News",
-      "title": "Why CISOs Struggle to Answer the Board's Three Hardest Questions, and How to Fix the Report",
-      "summary": "The quarterly board meeting is two weeks out. The security team is pulling exports from the identity provider, the cloud posture tool, the vulnerability scanner, the SIEM and the EDR console. Someone ",
-      "ttps": []
-    },
-    {
-      "source": "The Hacker News",
-      "title": "Android 17 Advanced Protection Locks Accessibility Services to Verified Accessibility Tools",
-      "summary": "Google has announced a new security measure that limits access to Android's accessibility services to verified applications classified as Accessibility Tools when Advanced Protection is enabled.\n\nWith",
-      "ttps": []
-    },
-    {
-      "source": "The Hacker News",
-      "title": "Critical FortiMail Zero-Day Flaw Exploited in Attacks Allows Unauthenticated Arbitrary File Writes",
-      "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA), on Thursday, added a critical security flaw impacting Fortinet FortiMail to its Known Exploited Vulnerabilities (KEV) catalog, followi",
-      "ttps": []
-    },
-    {
-      "source": "The Hacker News",
-      "title": "Police Arrest 16-Year-Old Suspected of Running KillSec, Seize Ransomware Leak Site and Servers",
-      "summary": "Police in Spain have arrested a 16-year-old whom investigators suspect of running the KillSec ransomware group. KillSec is accused of stealing data from organizations and threatening to publish it on ",
-      "ttps": [
-        {
-          "id": "T1486",
-          "name": "Data Encrypted for Impact (Ransomware)",
-          "status": "covered",
-          "query": "source=\"{log_source}\" AND event_type=\"file_modify\" AND file_extension in (\".locked\",\".encrypted\") AND file_count_per_min>50"
-        }
-      ]
-    },
-    {
-      "source": "The Hacker News",
-      "title": "ThreatsDay: AI-Powered Zero-Day Chain, 543K Live Secrets, Model Inspection RCE and 13 More Stories",
-      "summary": "This week, the useful words are boring ones: inspect, cache, compile, store, trust. Each sounds harmless. Each can become an attack path when a system does a little more than people expect. A model ch",
-      "ttps": [
-        {
-          "id": "T1190",
-          "name": "Exploit Public-Facing Application",
-          "status": "covered",
-          "query": "source=\"{log_source}\" AND http_status=200 AND uri_path contains \"admin\" AND response_size>10000"
-        }
-      ]
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "The EDR blind spot: 3 ways browser attacks evade endpoint telemetry",
-      "summary": "Browser-based attacks can steal sessions, abuse extensions, or manipulate users without creating the endpoint artifacts EDR is designed to detect. NordLayer explains three ways attacks can evade endpo",
-      "ttps": []
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "Dell asks admins to patch max severity CSM flaws as soon as possible",
-      "summary": "Dell has patched two maximum severity vulnerabilities in the Container Storage Modules (CSM) that connect Dell enterprise storage arrays to Kubernetes environments. [...]",
-      "ttps": []
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "Microsoft\u2019s X account hacked in crypto pump-and-dump scheme",
-      "summary": "On Thursday, unknown attackers hijacked the official Microsoft account on X, which has over 13 million followers, in what appeared to be a pump-and-dump scheme promoting a crypto token. [...]",
-      "ttps": []
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "Fortinet warns of critical FortiMail flaw exploited in zero-day attacks",
-      "summary": "Fortinet is warning customers of a critical FortiMail vulnerability, tracked as CVE-2026-104286, that is being actively exploited in zero-day attacks to execute unauthorized code or commands on vulner",
-      "ttps": []
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "Autonomous AI agents tried to hack US, Canadian government websites",
-      "summary": "Autonomous AI agents using aggressive strategies attempted to hack U.S. and Canadian government websites to find school and divorce statistics. [...]",
-      "ttps": [
-        {
-          "id": "T1190",
-          "name": "Exploit Public-Facing Application",
-          "status": "covered",
-          "query": "source=\"{log_source}\" AND http_status=200 AND uri_path contains \"admin\" AND response_size>10000"
-        }
-      ]
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "Microsoft says threat actors are ahead in the early AI race",
-      "summary": "Microsoft says cyberattackers are currently benefiting from artificial intelligence faster than defenders, allowing threat actors to speed up vulnerability discovery, malware development, and post-com",
-      "ttps": []
-    },
-    {
-      "source": "The Hacker News",
-      "title": "WordPress Backdoor Rebuilds Itself After Cleanup Using Files, Database, and Shared Memory",
-      "summary": "Cybersecurity researchers have shed light on a WordPress compromise in which threat actors deployed multiple persistence mechanisms to ensure that the final payload kept returning without having to in",
-      "ttps": []
-    },
-    {
-      "source": "The Hacker News",
-      "title": "How Financial Services Companies Can Modernize Their Software Supply Chain",
-      "summary": "Every security leader at a bank, insurer, or asset manager has had a version of this conversation: Security wants to eliminate a class of vulnerabilities. Engineering explains what it would take to up",
-      "ttps": []
     }
   ]
 }
