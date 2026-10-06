@@ -8,6 +8,137 @@
   "incidents": [
     {
       "source": "The Hacker News",
+      "title": "LibreOffice and OpenOffice Flaws Let Malicious Spreadsheets Run Code Without Macro Warnings",
+      "summary": "A malicious spreadsheet can make LibreOffice and Apache OpenOffice run an attacker's code as soon as the file is opened, security researchers have shown. There is no warning first, of the kind either ",
+      "ttps": []
+    },
+    {
+      "source": "The Hacker News",
+      "title": "Wikimedia Says OpenAI Agents Tried to Compromise Etherpad and Use Wiki Tools as Proxies",
+      "summary": "The Wikimedia Foundation, which hosts Wikipedia, has confirmed that it has discovered activity by rogue OpenAI agents on its platforms, including unsuccessful efforts to compromise Etherpad, a public ",
+      "ttps": []
+    },
+    {
+      "source": "The Hacker News",
+      "title": "Welcome to the Jungle: What We Found Inside 15,465 Public MCP Servers",
+      "summary": "In 2024, MCP (Model Context Protocol) set out to become the USB-C of AI: one standard for connecting models, agents, and IDEs to tools and data. The protocol delivered. Thousands of developers built s",
+      "ttps": []
+    },
+    {
+      "source": "The Hacker News",
+      "title": "Google Pauses OSS Product Bug Bounty Rewards After Surge in Invalid Automated Reports",
+      "summary": "Google has stopped accepting product vulnerability reports through its bug bounty program for its open-source software.\n\nThe change, in effect since October 1, means researchers can no longer submit s",
+      "ttps": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "status": "covered",
+          "query": "source=\"{log_source}\" AND http_status=200 AND uri_path contains \"admin\" AND response_size>10000"
+        }
+      ]
+    },
+    {
+      "source": "The Hacker News",
+      "title": "Critical Atlassian Flaw Lets Unauthenticated Attackers Read Known Files Across 8 Products",
+      "summary": "A critical flaw in 8 Atlassian Data Center products, which customers host themselves, allows an attacker with no login access to read specific files in each product's web application root directory.\n\n",
+      "ttps": []
+    },
+    {
+      "source": "The Hacker News",
+      "title": "FBI Removes Accenture Contractor After Patch Failure Led to ShinyHunters Breach",
+      "summary": "The U.S. Federal Bureau of Investigation (FBI) has removed an Accenture contractor for their alleged role in a ShinyHunters-breach that led to the theft of personal details of thousands of bureau empl",
+      "ttps": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "status": "covered",
+          "query": "source=\"{log_source}\" AND http_status=200 AND uri_path contains \"admin\" AND response_size>10000"
+        }
+      ]
+    },
+    {
+      "source": "The Hacker News",
+      "title": "Denmark Says Attackers Accessed CPR Data for 8.8 Million People via Company Account",
+      "summary": "Unauthorized parties have gained access to the names, addresses, and personal identification numbers of about 8.8 million people, living and dead, in Denmark's national population register, the countr",
+      "ttps": []
+    },
+    {
+      "source": "The Hacker News",
+      "title": "ClickFix Smuggles Payloads Through Browser Cache to Bypass Windows Run Limits",
+      "summary": "A new type of ClickFix attack is using compromised websites to trick users into executing a malicious payload cached in a web browser's cache.\n\n\"Instead of downloading and executing remote payloads li",
+      "ttps": []
+    },
+    {
+      "source": "The Hacker News",
+      "title": "Microsoft Exchange Flaw Lets Authenticated Attackers Read Other Users' Mailboxes",
+      "summary": "Microsoft has released out-of-band security updates to address a high-severity flaw in Microsoft Exchange Server that could allow an attacker to escalate privileges under certain conditions.\n\nThe vuln",
+      "ttps": []
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "How to secure RMM software: 8 controls MSPs should test",
+      "summary": "RMM platforms give MSPs privileged access across customer environments, making their security controls critical to limiting risk. Acronis outlines eight controls MSPs should test when evaluating RMM s",
+      "ttps": []
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "Wikimedia: Rogue OpenAI agents behind unauthorized Wikipedia edits",
+      "summary": "The Wikimedia Foundation says rogue OpenAI agents made unauthorized Wikipedia edits and may have been partially responsible for a May outage. [...]",
+      "ttps": []
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "Nikkei discloses breaches of employees\u2019 Microsoft, Google email accounts",
+      "summary": "Over the weekend, Japanese publishing giant Nikkei disclosed that unknown attackers recently breached two employee email accounts and used one to send thousands of phishing emails. [...]",
+      "ttps": [
+        {
+          "id": "T1566",
+          "name": "Unknown",
+          "status": "gap",
+          "query": ""
+        }
+      ]
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "Engineer sentenced for locking over 3,000 devices on employer network",
+      "summary": "A former core infrastructure engineer at an industrial company headquartered in New Jersey was sentenced to 32 months in prison for locking thousands of devices on his employer's network in a ransomwa",
+      "ttps": [
+        {
+          "id": "T1486",
+          "name": "Data Encrypted for Impact (Ransomware)",
+          "status": "covered",
+          "query": "source=\"{log_source}\" AND event_type=\"file_modify\" AND file_extension in (\".locked\",\".encrypted\") AND file_count_per_min>50"
+        }
+      ]
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "OpenAI is adding invisible watermarks to ChatGPT and Codex text in the EU",
+      "summary": "OpenAI is preparing to add invisible watermarks to text generated by ChatGPT and Codex in the European Union. [...]",
+      "ttps": []
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "Rejetto HFS servers now actively scanned for critical RCE flaw",
+      "summary": "Hackers are actively scanning for a Rejetto HFS weak signing key vulnerability, tracked as CVE-2026-61500, that allows session forgery, account takeover, and remote code execution (RCE). [...]",
+      "ttps": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "status": "covered",
+          "query": "source=\"{log_source}\" AND http_status=200 AND uri_path contains \"admin\" AND response_size>10000"
+        }
+      ]
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "IQVIA fined $7.8 million for failing to properly anonymize health data",
+      "summary": "Italy's Data Protection Authority (GPDP) has fined IQVIA \u20ac7 million ($7.8M) over poor data-processing practices that the agency says could have put roughly one million patients at risk of data exposur",
+      "ttps": []
+    },
+    {
+      "source": "The Hacker News",
       "title": "\u26a1 Weekly Recap: NetScaler and FortiMail 0-Days, AI Coding Leaks, Spectre v2 and Ransomware Arrests",
       "summary": "A blank field. A public repo. One reply to an email. A box left exposed. None of this sounds dramatic, which is partly the problem. This week\u2019s threats keep finding leverage in small things that were ",
       "ttps": [
@@ -102,137 +233,6 @@
       "source": "BleepingComputer",
       "title": "Google halts open-source bug bounty program amid AI spam surge",
       "summary": "Google has now suspended submissions to its Open Source Software Vulnerability Rewards Program (OSS VRP) after being flooded by AI-generated reports. [...]",
-      "ttps": [
-        {
-          "id": "T1190",
-          "name": "Exploit Public-Facing Application",
-          "status": "covered",
-          "query": "source=\"{log_source}\" AND http_status=200 AND uri_path contains \"admin\" AND response_size>10000"
-        }
-      ]
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "Citrix patches NetScaler SAML zero-day exploited in attacks",
-      "summary": "Citrix has released emergency updates for a new NetScaler denial-of-service vulnerability tracked as CVE-2026-88779 that has been exploited in zero-day attacks, with researchers investigating whether ",
-      "ttps": [
-        {
-          "id": "T1190",
-          "name": "Exploit Public-Facing Application",
-          "status": "covered",
-          "query": "source=\"{log_source}\" AND http_status=200 AND uri_path contains \"admin\" AND response_size>10000"
-        }
-      ]
-    },
-    {
-      "source": "The Hacker News",
-      "title": "ShinyHunters Suspect Rey Reportedly Detained in Jordan, Helping FBI Identify Group Members",
-      "summary": "A suspected member of the ShinyHunters digital extortion group, who goes by the online alias \"Rey,\" has been allegedly detained by authorities in Jordan, Reuters reported, citing three people familiar",
-      "ttps": []
-    },
-    {
-      "source": "The Hacker News",
-      "title": "China-Aligned TA419 Targets U.S. AI Policy Experts With Microsoft AitM Phishing",
-      "summary": "A new China-nexus cyber espionage group known as TA419 has been attributed to multiple credential phishing campaigns targeting artificial intelligence (AI) experts working for U.S. think tanks, univer",
-      "ttps": [
-        {
-          "id": "T1566",
-          "name": "Unknown",
-          "status": "gap",
-          "query": ""
-        }
-      ]
-    },
-    {
-      "source": "The Hacker News",
-      "title": "MI5 Says China\u2019s MSS Funded Research Involving 100+ U.K.-Linked Academics",
-      "summary": "The U.K.'s domestic intelligence and security agency has warned that more than 100 academics have helped China boost its intelligence gathering efforts on behalf of Beijing's state security service.\n\n",
-      "ttps": []
-    },
-    {
-      "source": "The Hacker News",
-      "title": "Warlock Exploits SharePoint Flaws to Disable Security Tools and Deploy Ransomware",
-      "summary": "The suspected China-linked threat actor known as Warlock is still continuing to weaponize Microsoft SharePoint vulnerabilities, likely both old and new, in attacks targeting organizations in Portugues",
-      "ttps": [
-        {
-          "id": "T1486",
-          "name": "Data Encrypted for Impact (Ransomware)",
-          "status": "covered",
-          "query": "source=\"{log_source}\" AND event_type=\"file_modify\" AND file_extension in (\".locked\",\".encrypted\") AND file_count_per_min>50"
-        }
-      ]
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "Anthropic asks Claude users to share voice data for AI model training",
-      "summary": "Anthropic has started asking Claude users to voluntarily share their voice conversations to help train and improve its AI models. [...]",
-      "ttps": []
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "Google Gemini could soon get full access to your Mac\u2019s files, apps and the web",
-      "summary": "Google's Gemini could soon access any file on your macOS device, open apps, browse the web, and perform actions without asking for permission every time. [...]",
-      "ttps": []
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "ShinyHunters hacker reportedly detained in Jordan, aiding FBI",
-      "summary": "A suspected ShinyHunters hacking group member known online as \"Rey\" has reportedly been detained in Jordan and is cooperating with the FBI to help locate other members of the extortion group. [...]",
-      "ttps": []
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "Danish university DTU breach exposes data of up to 200,000 people",
-      "summary": "The Technical University of Denmark (DTU) says information belonging to up to 200,000 users may have been exposed after hackers accessed its identity and access management system and downloaded a larg",
-      "ttps": []
-    },
-    {
-      "source": "The Hacker News",
-      "title": "The State of Cybersecurity in 2026:\u00a0Key Segments, Insights, and Innovations",
-      "summary": "Featuring:\n\nCybersecurity is being reshaped by the expansion of cloud infrastructure, AI, distributed systems, and increasingly complex digital environments. As organizations manage more identities, d",
-      "ttps": []
-    },
-    {
-      "source": "The Hacker News",
-      "title": "GitLab Patches Critical 9.9 AI Gateway Flaw Allowing Command Execution on Self-Hosted Servers",
-      "summary": "A critical flaw in GitLab's AI Gateway could let a logged-in user with Duo Agent Platform access run commands on the gateway under certain conditions, GitLab&nbsp;said in an advisory.\n\nThe gateway is ",
-      "ttps": []
-    },
-    {
-      "source": "The Hacker News",
-      "title": "Antino Backdoor Uses Outlook and OneDrive for C2 in China-Nexus Espionage Campaign",
-      "summary": "Government and policy organizations across Asia have become the target of a new campaign orchestrated by a China-nexus threat actor.\n\nThe activity, which has targeted government and policy organizatio",
-      "ttps": []
-    },
-    {
-      "source": "The Hacker News",
-      "title": "Dell CSM Flaws Enable Unauthenticated Admin Access and Root on Kubernetes Nodes",
-      "summary": "Dell has released security updates to address multiple critical security flaws in Dell Container Storage Modules (CSM) that could be exploited by bad actors to take over susceptible systems.\n\nThe vuln",
-      "ttps": []
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "Frontline Education breach exposes school district employee data",
-      "summary": "Frontline Education is notifying school districts of a data breach after attackers exploited a vulnerability in third-party software to gain unauthorized access to its systems and steal employee infor",
-      "ttps": []
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "Warlock ransomware breach SharePoint in water, telecom operator attacks",
-      "summary": "The China-linked ransomware group Warlock targeted a water utility, a telecom provider, a regional government body, and a university by exploiting SharePoint vulnerabilities to gain initial access. [.",
-      "ttps": [
-        {
-          "id": "T1486",
-          "name": "Data Encrypted for Impact (Ransomware)",
-          "status": "covered",
-          "query": "source=\"{log_source}\" AND event_type=\"file_modify\" AND file_extension in (\".locked\",\".encrypted\") AND file_count_per_min>50"
-        }
-      ]
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "GitLab warns of critical RCE vulnerability in AI Gateway service",
-      "summary": "GitLab warned customers today to immediately patch a critical AI Gateway vulnerability that could let attackers run arbitrary commands on vulnerable instances. [...]",
       "ttps": [
         {
           "id": "T1190",
