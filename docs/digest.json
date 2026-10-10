@@ -2,10 +2,116 @@
   "stats": {
     "attacks_tracked": 30,
     "ttps_identified": 12,
-    "queries_ready": 11,
-    "coverage_gaps": 1
+    "queries_ready": 12,
+    "coverage_gaps": 0
   },
   "incidents": [
+    {
+      "source": "The Hacker News",
+      "title": "The Third-Party Agent Problem: Why Security Built for AI You Chose Misses the Agents You Didn't",
+      "summary": "In environments studied for the 2026 State of Agent Security Report, roughly 1,280 third-party products now embed AI. About 282 of them sit behind single sign-on. The other thousand are invisible to i",
+      "ttps": []
+    },
+    {
+      "source": "The Hacker News",
+      "title": "Anthropic Cuts Live Internet Access for Internal AI Tests After Claude Exploits Injection Flaws",
+      "summary": "Anthropic on Friday said it's cutting off live internet access for all its internal evaluations following the discovery of new incidents in which its artificial intelligence (AI) models exhibited misa",
+      "ttps": []
+    },
+    {
+      "source": "The Hacker News",
+      "title": "Credential-Stealing GitHub Actions Workflows Planted in Tens of Thousands of Repositories",
+      "summary": "Cybersecurity researchers have disclosed details of an ongoing credential-theft campaign that has compromised two high-profile open-source maintainer accounts to push a malicious workflow into over 34",
+      "ttps": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "status": "covered",
+          "query": "source=\"{log_source}\" AND http_status=200 AND uri_path contains \"admin\" AND response_size>10000"
+        }
+      ]
+    },
+    {
+      "source": "The Hacker News",
+      "title": "FBI Arrests Another ShinyHunters Suspect Reportedly Involved in Its Jobs Portal Hack",
+      "summary": "The FBI has arrested another suspected co-conspirator of ShinyHunters, FBI Director Kash Patel said on October 9 in a&nbsp;post on X.\n\nShinyHunters is the extortion group that said in September it had",
+      "ttps": []
+    },
+    {
+      "source": "The Hacker News",
+      "title": "P7 DarkSword iOS Exploit Kit Adds Crypto Wallet Data Theft and Remote Commands",
+      "summary": "Cybersecurity researchers have disclosed details of a previously unseen variant of the DarkSword iOS exploit kit called P7 DarkSword.\n\n\"Compared with the variants we usually observe, P7 reduces its on",
+      "ttps": [
+        {
+          "id": "T1041",
+          "name": "Exfiltration Over C2 Channel",
+          "status": "covered",
+          "query": "source=\"{log_source}\" AND direction=\"outbound\" AND bytes_out>100000000 AND dest_reputation=\"unknown\""
+        }
+      ]
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "Hacker used ARTEX AI and Claude agents to target South Korean banks",
+      "summary": "The cyberattacks that shook the South Korean financial sector earlier this month were launched by a Chinese hacker using the ARTEX AI penetration testing suite and Claude agents. [...]",
+      "ttps": []
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "Criminal IP Introduces AITEM as the Next Evolution of Attack Surface Management",
+      "summary": "Traditional attack surface management helps organizations discover exposed assets, but visibility alone is not enough to address threats. Criminal IP introduces AITEM, an AI-powered approach that conn",
+      "ttps": []
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "Hackers abuse Google Ads, Bing redirects to push Claude ClickFix attacks",
+      "summary": "Hackers are abusing legitimate Bing search-result redirects as click URLs in Google search ads to direct users to fake Claude installers that deliver ClickFix attacks. [...]",
+      "ttps": []
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "Unpatched AhsayCBS flaws exploited to deploy webshells, mine crypto",
+      "summary": "Threat actors are exploiting one critical and one medium-severity vulnerability still unpatched in the AhsayCBS backup management platform to deploy webshells and cryptocurrency miners. [...]",
+      "ttps": []
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "FBI arrests another suspected ShinyHunters hacker after agency breach",
+      "summary": "The FBI has arrested another suspected member of the ShinyHunters extortion group believed to be involved in the recent breach of FBI systems, Director Kash Patel announced Friday. [...]",
+      "ttps": []
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "Germany arrests alleged core Qilin ransomware member after extradition",
+      "summary": "Germany has arrested a Russian national suspected of being a leading member of the Qilin ransomware group following extradition from Japan earlier this month. [...]",
+      "ttps": [
+        {
+          "id": "T1486",
+          "name": "Data Encrypted for Impact (Ransomware)",
+          "status": "covered",
+          "query": "source=\"{log_source}\" AND event_type=\"file_modify\" AND file_extension in (\".locked\",\".encrypted\") AND file_count_per_min>50"
+        }
+      ]
+    },
+    {
+      "source": "Krebs on Security",
+      "title": "FBI Arrests Executive at Ransomware Negotiation Firm",
+      "summary": "Agents with the Federal Bureau of Investigation (FBI) on Thursday arrested the co-founder of a Canadian cybersecurity firm in connection with an investigation into the ShinyHunters hacking group that ",
+      "ttps": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "status": "covered",
+          "query": "source=\"{log_source}\" AND http_status=200 AND uri_path contains \"admin\" AND response_size>10000"
+        },
+        {
+          "id": "T1486",
+          "name": "Data Encrypted for Impact (Ransomware)",
+          "status": "covered",
+          "query": "source=\"{log_source}\" AND event_type=\"file_modify\" AND file_extension in (\".locked\",\".encrypted\") AND file_count_per_min>50"
+        }
+      ]
+    },
     {
       "source": "The Hacker News",
       "title": "TP-Link Sued by Four More U.S. States Over Router Security and China Ties",
@@ -162,113 +268,6 @@
       "title": "Man admits to running network of 15,000 money mules for cybercriminals",
       "summary": "\u200bA Ukrainian-Russian dual citizen has pleaded guilty to running a massive money laundering operation that laundered millions for cybercriminals worldwide. [...]",
       "ttps": []
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "Microsoft: Outdated Windows devices will stop receiving security updates",
-      "summary": "Microsoft says devices running unsupported versions of Windows will stop receiving security updates after next year's Windows Update certificate rotation. [...]",
-      "ttps": []
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "Citrix warns admins to patch new NetScaler RCE flaw immediately",
-      "summary": "Citrix has warned IT administrators to patch systems immediately against a new critical vulnerability affecting NetScaler ADC networking appliances and NetScaler Gateway secure remote access solutions",
-      "ttps": [
-        {
-          "id": "T1190",
-          "name": "Exploit Public-Facing Application",
-          "status": "covered",
-          "query": "source=\"{log_source}\" AND http_status=200 AND uri_path contains \"admin\" AND response_size>10000"
-        }
-      ]
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "Hackers get $1,262,000 for 98 zero-days at Pwn2Own Ireland",
-      "summary": "The Pwn2Own Ireland 2026 hacking contest has concluded, with hackers collecting $1,262,000 in rewards after exploiting 98 zero-day flaws. [...]",
-      "ttps": []
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "FBI disrupts Chinese hacking tools used to breach critical infrastructure",
-      "summary": "The FBI has seized seven domains used by Chinese state-sponsored hackers known as Flax Typhoon to operate two hacking tools, MicroScan and FishHub, used in attacks that breached critical infrastructur",
-      "ttps": []
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "Ransomware attack disrupts Japan's IDCF Cloud used by govt clients",
-      "summary": "IDC Frontier, a major Japanese cloud and digital infrastructure company, disclosed that its IDCF Cloud service was targeted in a ransomware attack that caused an outage at a data center cluster servin",
-      "ttps": [
-        {
-          "id": "T1486",
-          "name": "Data Encrypted for Impact (Ransomware)",
-          "status": "covered",
-          "query": "source=\"{log_source}\" AND event_type=\"file_modify\" AND file_extension in (\".locked\",\".encrypted\") AND file_count_per_min>50"
-        }
-      ]
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "Low-cost Android phones ship with residential proxy malware",
-      "summary": "A malware campaign dubbed 'Midnight Mimosa' has been discovered on low-cost Android smartphones that ship with malicious software embedded in their firmware, allowing attackers to silently install app",
-      "ttps": []
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "FakeGit malware campaign returns with 17,610 malicious GitHub repos",
-      "summary": "More than 17,000 fake repositories on GitHub are distributing the SmartLoader malware after the FakeGit campaign reactivated earlier this month to push the StealC infostealer. [...]",
-      "ttps": []
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "Cisco warns of critical flaws allowing Nexus switch takeover",
-      "summary": "Cisco released security advisories for five critical vulnerabilities in its NX-OS data center network operating system that could be exploited to run arbitrary code with root privileges on Nexus switc",
-      "ttps": []
-    },
-    {
-      "source": "The Hacker News",
-      "title": "Wazza Phishkit Targets Banking, Government, and Manufacturing Across the US, EU, and Australia",
-      "summary": "Phishing kits are no longer limited to copying a familiar login page and waiting for a victim to enter credentials. Attackers are increasingly building filtering, session management, and traffic contr",
-      "ttps": [
-        {
-          "id": "T1566",
-          "name": "Unknown",
-          "status": "gap",
-          "query": ""
-        }
-      ]
-    },
-    {
-      "source": "The Hacker News",
-      "title": "16 Malicious Firefox Extensions Pose as Rabby and OKX Wallets to Steal Recovery Phrases",
-      "summary": "Cybersecurity researchers have discovered a cluster of 16 malicious Mozilla Firefox extensions that are capable of stealing cryptocurrency wallet recovery phrases and private keys.\n\n\"The extensions ma",
-      "ttps": [
-        {
-          "id": "T1190",
-          "name": "Exploit Public-Facing Application",
-          "status": "covered",
-          "query": "source=\"{log_source}\" AND http_status=200 AND uri_path contains \"admin\" AND response_size>10000"
-        }
-      ]
-    },
-    {
-      "source": "The Hacker News",
-      "title": "U.S. Offers Up to $10 Million for Tips on Zhang Yu, Charged in HAFNIUM Hacks",
-      "summary": "The U.S. State Department is offering up to $10 million for information leading to the identification or location of Zhang Yu, a Chinese national charged in the United States in connection with the 20",
-      "ttps": []
-    },
-    {
-      "source": "The Hacker News",
-      "title": "MonsterCloud Owner Accused of Billing Over $19M While Secretly Paying Ransoms to Decrypt Data",
-      "summary": "The U.S. Department of Justice (DoJ) on Wednesday announced charges against a 50-year-old U.S. and Israeli national for allegedly defrauding ransomware victims by secretly paying the attackers to obta",
-      "ttps": [
-        {
-          "id": "T1486",
-          "name": "Data Encrypted for Impact (Ransomware)",
-          "status": "covered",
-          "query": "source=\"{log_source}\" AND event_type=\"file_modify\" AND file_extension in (\".locked\",\".encrypted\") AND file_count_per_min>50"
-        }
-      ]
     }
   ]
 }
