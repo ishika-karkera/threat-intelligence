@@ -1,11 +1,215 @@
 {
   "stats": {
     "attacks_tracked": 30,
-    "ttps_identified": 5,
-    "queries_ready": 4,
-    "coverage_gaps": 1
+    "ttps_identified": 6,
+    "queries_ready": 6,
+    "coverage_gaps": 0
   },
   "incidents": [
+    {
+      "source": "The Hacker News",
+      "title": "Google Chrome Adds ClickFix Warnings to Stop Users From Running Malicious Commands",
+      "summary": "Google on Tuesday said it's rolling out improved safeguards in its Chrome browser to secure users against ClickFix attacks when Enhanced Protection is enabled.\n\nClickFix is a popular social engineerin",
+      "ttps": []
+    },
+    {
+      "source": "The Hacker News",
+      "title": "China-Aligned Bronze Sandcastle Abuses Sandboxie DLL Sideloading to Deploy Backdoors",
+      "summary": "Cybersecurity researchers have disclosed details of a previously undocumented China-aligned threat cluster known as Bronze Sandcastle that has been observed targeting organizations in Asia and Africa ",
+      "ttps": []
+    },
+    {
+      "source": "The Hacker News",
+      "title": "Generative AI Is Erasing Behavioral Tells, Weakening Behavior-Only Detection, Proofpoint Reports",
+      "summary": "Generative AI has changed what a malicious email looks like. Messages that once gave themselves away through clumsy wording, generic pretexts, and reused templates now arrive fluent, personalized, and",
+      "ttps": []
+    },
+    {
+      "source": "The Hacker News",
+      "title": "PHP2Shell: What Actually Protects You Before the 14:00 UTC PHP RCE Patch, and What Doesn't",
+      "summary": "You cannot fully block the two critical PHP flaws called PHP2Shell before today's fix, and the one setting being passed around as a workaround is not enough on its own, the security firm that suggeste",
+      "ttps": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "status": "covered",
+          "query": "source=\"{log_source}\" AND http_status=200 AND uri_path contains \"admin\" AND response_size>10000"
+        }
+      ]
+    },
+    {
+      "source": "The Hacker News",
+      "title": "The Harness Is the Hard Part of Agentic Pentesting",
+      "summary": "An AppSec team can point an AI agent running on a general-purpose model at its own web apps with little setup. Sure, the model writes the attacks. But everything that makes those attacks safe to run a",
+      "ttps": []
+    },
+    {
+      "source": "The Hacker News",
+      "title": "Attackers Hijacked Over 300 Tor Exit Relays to Intercept SSH Connections",
+      "summary": "Attackers took control of more than 300 Tor exit relays in early October and used them to redirect SSH connections to servers that stole login passwords, a researcher found.\n\nExit relays are the last ",
+      "ttps": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "status": "covered",
+          "query": "source=\"{log_source}\" AND http_status=200 AND uri_path contains \"admin\" AND response_size>10000"
+        }
+      ]
+    },
+    {
+      "source": "The Hacker News",
+      "title": "PHP2Shell: Two Unpatched Critical PHP RCE Flaws (CVSS 9.2) Trigger Emergency Security Alert",
+      "summary": "This story is developing and was written before PHP's scheduled 14:00 UTC release on October 21. Once the release is out, the affected and fixed versions below are confirmed by the official advisory.\n",
+      "ttps": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "status": "covered",
+          "query": "source=\"{log_source}\" AND http_status=200 AND uri_path contains \"admin\" AND response_size>10000"
+        }
+      ]
+    },
+    {
+      "source": "The Hacker News",
+      "title": "Attackers Abuse UpdraftCentral Keys to Plant Backdoors on WordPress Sites",
+      "summary": "Unknown threat actors breached TeamUpdraft's website and potentially gained unauthorized access to customers' connection keys for UpdraftCentral, UpdraftVault, and UpdraftClone, using them to backdoor",
+      "ttps": []
+    },
+    {
+      "source": "The Hacker News",
+      "title": "U.S. Orders DeepSeek Removed From Federal Civilian Systems, Bans New Purchases",
+      "summary": "U.S. federal civilian agencies must remove DeepSeek products from their information technology systems, along with any third-party products or services \"developed using DeepSeek implementations,\" unde",
+      "ttps": []
+    },
+    {
+      "source": "The Hacker News",
+      "title": "State Bank of India Confirms Data Leak After 3,897 Customer Records Found on Dark Web",
+      "summary": "State Bank of India has identified 3,897 customer records containing personal information in a set of about 375,000 records available on the dark web, and it does not yet know where the data came from",
+      "ttps": []
+    },
+    {
+      "source": "The Hacker News",
+      "title": "CISA Orders Federal Agencies to Patch Exploited Plex2Shell, Siemens, and SiteGuard Flaws",
+      "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Tuesday added four vulnerabilities to its Known Exploited Vulnerabilities (KEV) catalog, including four vulnerabilities impacting Pl",
+      "ttps": []
+    },
+    {
+      "source": "The Hacker News",
+      "title": "Hackers Hid Vasilek Backdoor in VMware Tools During 2-Year Russian Healthcare Intrusion",
+      "summary": "A Belarus-aligned hacktivist group spent nearly two years within the network of a Russian healthcare organization.\n\nAccording to a report published by Russian cybersecurity firm Solar, the activity ha",
+      "ttps": []
+    },
+    {
+      "source": "The Hacker News",
+      "title": "Eight eMudhra CA Keys Compromised, Triggering Emergency Fixes Across Browsers and Software",
+      "summary": "The private keys of eight eMudhra intermediate certificate authority (CA) certificates are compromised,&nbsp;Mozilla&nbsp;and&nbsp;Google's Chrome Root Program&nbsp;confirms on October 20.\n\nAn interme",
+      "ttps": []
+    },
+    {
+      "source": "The Hacker News",
+      "title": "Critical FortiSIEM Flaw Gets Public Exploit PoC for Unauthenticated Remote Code Execution",
+      "summary": "Cybersecurity researchers have released a proof-of-concept (PoC) exploit for a recently patched critical security flaw impacting Fortinet FortiSIEM that could result in arbitrary code execution.\n\nThe ",
+      "ttps": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "status": "covered",
+          "query": "source=\"{log_source}\" AND http_status=200 AND uri_path contains \"admin\" AND response_size>10000"
+        }
+      ]
+    },
+    {
+      "source": "The Hacker News",
+      "title": "Qilin and INC Ransomware Groups Exploit Palo Alto Networks Flaw to Bypass MFA",
+      "summary": "Palo Alto Networks has disclosed that it's continuing to observe exploitation of a now-patched security flaw impacting&nbsp; PAN-OS and Prisma Access by ransomware actors.\n\nThe activity relates to CVE",
+      "ttps": [
+        {
+          "id": "T1486",
+          "name": "Data Encrypted for Impact (Ransomware)",
+          "status": "covered",
+          "query": "source=\"{log_source}\" AND event_type=\"file_modify\" AND file_extension in (\".locked\",\".encrypted\") AND file_count_per_min>50"
+        }
+      ]
+    },
+    {
+      "source": "The Hacker News",
+      "title": "Hackers Use Autonomous AI Agents to Breach Company Websites, Target Over 1,200 Sites",
+      "summary": "A Chinese-speaking criminal pointed autonomous AI agents at company websites and let them break in with almost no help, and a security researcher watched it happen because the operators left their con",
+      "ttps": []
+    },
+    {
+      "source": "The Hacker News",
+      "title": "Pegasus Spyware Infection Confirmed on Serbian University Rector's iPhone Days Before Election",
+      "summary": "The iPhone of Vladan \u0110oki\u0107, rector of the University of Belgrade and a prominent supporter of Serbia's student protest movement, was infected with NSO Group's Pegasus spyware in 2026, the&nbsp;Citizen",
+      "ttps": []
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "Microsoft PowerToys adds CursorHide, Button Lock mouse tools",
+      "summary": "Microsoft has released PowerToys 0.102, with two new mouse utilities, new command-line tools, and Command Palette improvements. [...]",
+      "ttps": []
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "Microsoft says October updates didn\u2019t actually fix VPN issues",
+      "summary": "Microsoft says it mistakenly flagged a bug causing Always On VPN connection issues as fixed in the October 2026 Windows 11 cumulative updates. [...]",
+      "ttps": []
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "CISA: SafePay ransomware hit over 600 critical infrastructure orgs",
+      "summary": "The Cybersecurity and Infrastructure Security Agency (CISA) says the SafePay ransomware gang has breached over 600 critical infrastructure organizations worldwide since 2024. [...]",
+      "ttps": [
+        {
+          "id": "T1486",
+          "name": "Data Encrypted for Impact (Ransomware)",
+          "status": "covered",
+          "query": "source=\"{log_source}\" AND event_type=\"file_modify\" AND file_extension in (\".locked\",\".encrypted\") AND file_count_per_min>50"
+        }
+      ]
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "Stolen UpdraftCentral keys used to backdoor WordPress sites",
+      "summary": "A threat actor breached TeamUpdraft's website, a developer of popular WordPress backup and security plugins, potentially compromising UpdraftCentral connection keys that can send commands to connected",
+      "ttps": []
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "Mozilla, Google, Apple block compromised eMudhra CA certificates",
+      "summary": "Certificate authority eMudhra revoked eight compromised intermediate certificates after researchers found their private keys were so weak that anyone could recover them almost instantly and use them t",
+      "ttps": []
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "PHP warns admins of two critical flaws, emergency patches coming tomorrow",
+      "summary": "The PHP security team is warning administrators to prepare for emergency security updates tomorrow to address two critical vulnerabilities, as information about the flaws has reportedly leaked ahead o",
+      "ttps": []
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "Zeabur shutting down after second security breach in two months",
+      "summary": "Development platform Zeabur has disclosed details of a cybersecurity incident in which an attacker used leaked internal credentials stored in plaintext to compromise its infrastructure and steal over ",
+      "ttps": []
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "OpenAI says GPT-6.1 Sol is dramatically better at migrating legacy code",
+      "summary": "OpenAI confirmed that its newer models are much better at writing and migrating software in older programming languages. [...]",
+      "ttps": []
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "DHS bans DeepSeek products across US federal civilian agencies",
+      "summary": "The U.S. Department of Homeland Security (DHS) is ordering federal civilian agencies to stop using DeepSeek products and remove them from government systems. [...]",
+      "ttps": []
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "CJIS v6.1 Compliance: 5 Practical Priorities for Agencies",
+      "summary": "CJIS v6.1 requires agencies to maintain strong authentication, account security, and audit controls while demonstrating ongoing compliance. Specops outlines five practical priorities covering MFA, acc",
+      "ttps": []
+    },
     {
       "source": "The Hacker News",
       "title": "WhatsApp Hid Instructions in Help Pages Telling Its AI Chatbot Not to Recommend Privacy Regulators",
@@ -22,203 +226,6 @@
       "source": "The Hacker News",
       "title": "Go Issues Emergency Update Blocking Eight CA Keys Over Undisclosed Security Concerns",
       "summary": "Go 1.27.3 and Go 1.26.10, released on October 20, make Go's certificate verifier reject any certificate chain that passes through one of&nbsp;eight intermediate certificate authority keys.\n\nPrograms b",
-      "ttps": []
-    },
-    {
-      "source": "The Hacker News",
-      "title": "Russian APT28 Breaches NATO Naval Shipbuilder in NATO Country, Deploys New Reflective Loader",
-      "summary": "The Russia-linked state-sponsored threat actor tracked as APT28 (aka BlueDelta, Fancy Bear, and Forest Blizzard) has been attributed to attacks targeting two member states of the North Atlantic Treaty",
-      "ttps": []
-    },
-    {
-      "source": "The Hacker News",
-      "title": "ConnectWise Resets Credentials as Cloud Backup Remains Offline After Security Incident",
-      "summary": "ConnectWise on Monday said it has taken remediation measures, including strengthening administrative-access protections and resetting accounts and replacing application credentials, as it continues to",
-      "ttps": []
-    },
-    {
-      "source": "The Hacker News",
-      "title": "Hackers Hijack Five OVHcloud CLI Releases to Distribute Secret-Stealing Malware",
-      "summary": "An attacker used a contributor's GitHub account to replace the download archives on five existing releases of OVHcloud's command-line tool on Monday, October 19. The account had been hijacked, and the",
-      "ttps": []
-    },
-    {
-      "source": "The Hacker News",
-      "title": "ClickFix Attackers Exploit Siemens Software Center Flaw to Deploy Remote Access Trojan",
-      "summary": "Siemens has addressed a DLL sideloading vulnerability impacting Siemens Software Center that it said has been exploited in ClickFix attacks.\n\nThe high-severity vulnerability, tracked as CVE-2026-11093",
-      "ttps": []
-    },
-    {
-      "source": "The Hacker News",
-      "title": "Ex-OpenAI Engineer Detained in Spy Device Case as Saudi Royal Contacts Emerge",
-      "summary": "A U.S. court on Monday granted the U.S. government's request to detain a former OpenAI engineer accused of planting a recording device in an executive conference room at the company's San Francisco of",
-      "ttps": []
-    },
-    {
-      "source": "The Hacker News",
-      "title": "Hackers Use New ROMULUS ClickFix Platform to Deliver LegionLoader and Other Malware",
-      "summary": "Cybersecurity researchers have disclosed details of a ClickFix delivery platform called ROMULUS that's being used to distribute malware such as Legion Loader.\n\nAccording to Forescout Research - Vedere",
-      "ttps": []
-    },
-    {
-      "source": "The Hacker News",
-      "title": "Hackers Exploit Plex2Shell Flaws to Install Crypto Miners and Linux Proxy Backdoor",
-      "summary": "Threat actors have begun to exploit a chain of vulnerabilities in Plex Media Server to deploy cryptocurrency miners and reverse proxy software, a day after a proof-of-concept (PoC) went public.\n\nAccor",
-      "ttps": []
-    },
-    {
-      "source": "The Hacker News",
-      "title": "Popular WordPress SEO Plugin Rank Math PRO Hijacked to Deliver Self-Restoring Backdoor",
-      "summary": "Copies of Rank Math PRO, the paid version of the Rank Math SEO plugin for WordPress, that were downloaded from rankmath.com or delivered as updates between 20:02 UTC on October 15 and 07:12 UTC on Oct",
-      "ttps": []
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "Hacker gets 8 years for stealing $3.3 million from taxpayers",
-      "summary": "A Nigerian national was sentenced to eight years in prison for his involvement in a series of spearphishing attacks targeting US tax preparation businesses since 2019. [...]",
-      "ttps": [
-        {
-          "id": "T1566",
-          "name": "Unknown",
-          "status": "gap",
-          "query": ""
-        }
-      ]
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "Windows Server 2025 gets support for quick machine recovery",
-      "summary": "Microsoft announced that IT administrators can now use\u00a0quick machine recovery on Windows Server 2025 after installing the\u00a0October 2026 security update. [...]",
-      "ttps": []
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "OVHcloud CLI releases backdoored on GitHub to steal developer secrets",
-      "summary": "French cloud and hosting provider OVHcloud is warning users that attackers compromised its open-source command-line interface (CLI) tool to distribute information-stealing malware. [...]",
-      "ttps": [
-        {
-          "id": "T1190",
-          "name": "Exploit Public-Facing Application",
-          "status": "covered",
-          "query": "source=\"{log_source}\" AND http_status=200 AND uri_path contains \"admin\" AND response_size>10000"
-        }
-      ]
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "Ahold Delhaize: Cyberattack affects services across US and Europe",
-      "summary": "Ahold Delhaize, one of the world's largest food retail chains, confirmed that last week's cyberattack disrupted services at stores across Europe and the United States. [...]",
-      "ttps": []
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "Revolut outage disrupts online banking operations worldwide",
-      "summary": "Fintech company Revolut is working to resolve a massive outage that disrupted most of its services worldwide earlier today. [...]",
-      "ttps": []
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "Nikkei discloses third data breach in a month, 1.8M records exposed",
-      "summary": "Nikkei Inc. disclosed a new data breach, the third in about a month, that exposed 1.83 million personal information records. [...]",
-      "ttps": []
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "WordPress SEO plugin Rank Math compromised to backdoor websites",
-      "summary": "Some downloads of the Rank Math PRO WordPress plugin from the vendor's official website carried malware that planted hidden backdoors in a supply-chain attack last week. [...]",
-      "ttps": []
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "Hackers hijack AOMEI update servers to secretly spread malware",
-      "summary": "Hackers reportedly compromised AOMEI's servers to distribute malware through a built-in promotional feature in its backup software, briefly tampering with configuration files before restoring them to ",
-      "ttps": []
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "Bullhorn takes staffing platform offline to contain cyberattack",
-      "summary": "Staffing software company Bullhorn has disabled access to its platform to contain a cyberattack that caused a system-wide outage. [...]",
-      "ttps": []
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "OpenCode hack exposes API keys amid AI distillation attacks",
-      "summary": "The open-source AI coding project OpenCode has notified a small number of users that API keys they used with external providers were exposed in a security breach. [...]",
-      "ttps": [
-        {
-          "id": "T1190",
-          "name": "Exploit Public-Facing Application",
-          "status": "covered",
-          "query": "source=\"{log_source}\" AND http_status=200 AND uri_path contains \"admin\" AND response_size>10000"
-        }
-      ]
-    },
-    {
-      "source": "The Hacker News",
-      "title": "\u26a1 Weekly Recap: 98 Zero-Days, Rogue AI Agents, $100M Crypto Theft, 700 Supermarkets Hit and More",
-      "summary": "The worst problems don't always come with a warning. Sometimes they arrive through a service everyone trusts, a device someone bought, or a system nobody thought to check. By the time something looks ",
-      "ttps": []
-    },
-    {
-      "source": "The Hacker News",
-      "title": "GhostAction Attackers Plant Credential Stealer Disguised as Font in 94 GitHub Repositories",
-      "summary": "The threat actor behind the GhostAction supply chain attack has expanded beyond injecting malicious GitHub Actions workflows into compromised projects to phish open-source developers and deliver a ste",
-      "ttps": [
-        {
-          "id": "T1190",
-          "name": "Exploit Public-Facing Application",
-          "status": "covered",
-          "query": "source=\"{log_source}\" AND http_status=200 AND uri_path contains \"admin\" AND response_size>10000"
-        }
-      ]
-    },
-    {
-      "source": "The Hacker News",
-      "title": "From Email-to-Case to the Boardroom: How Inherited Agents Break Governance Built for Software",
-      "summary": "In Salesforce Agentforce, the recommended way to make an agent respond to events is a Flow: a record is created or a case is updated, and the Flow passes data into the agent's prompt. Separately, Emai",
-      "ttps": [
-        {
-          "id": "T1190",
-          "name": "Exploit Public-Facing Application",
-          "status": "covered",
-          "query": "source=\"{log_source}\" AND http_status=200 AND uri_path contains \"admin\" AND response_size>10000"
-        }
-      ]
-    },
-    {
-      "source": "The Hacker News",
-      "title": "Fake Web3 Accelerator Uses npm Packages to Spread Malware and Hijack AI Agent Traffic",
-      "summary": "A fake Web3 accelerator has been observed pushing information stealers and backdoors to Windows and macOS systems using malicious npm packages under the pretext of offering free artificial intelligenc",
-      "ttps": []
-    },
-    {
-      "source": "The Hacker News",
-      "title": "Unpatched Broadcom Wi-Fi Flaw Lets Attackers in Range Run Code as Root on Routers",
-      "summary": "A flaw in Broadcom's Wi-Fi setup software lets an attacker within radio range run code as root on Broadcom-based routers, without the network password or any pairing step, security researcher Quentin ",
-      "ttps": []
-    },
-    {
-      "source": "The Hacker News",
-      "title": "OpenCode Console Breach May Have Exposed OpenAI, Anthropic, and Google API Keys",
-      "summary": "An intruder reached a legacy system at OpenCode on the night of October 16 and may have exposed the third-party AI provider keys that users had saved in OpenCode Console, the company said.\n\nConsole is",
-      "ttps": []
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "Microsoft fixes game, app crashes caused by recent Windows update",
-      "summary": "Microsoft has resolved a bug that caused games and apps using AC-3 (Dolby Digital) audio decoding to crash after installing the September 2026 Windows 11 preview update (KB5124010). [...]",
-      "ttps": []
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "Inside the Underground Market for Know Your Client Services",
-      "summary": "Cybercriminals are selling forged identity documents, deepfake videos, and live verification services to help buyers bypass Know Your Client (KYC) checks. Flare examines how these underground services",
-      "ttps": []
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "F5 releases out-of-band patches for critical NGINX vulnerabilities",
-      "summary": "F5 has released out-of-band security patches to address multiple NGINX web server flaws, including three critical-severity vulnerabilities that can let attackers execute code on vulnerable systems. [.",
       "ttps": []
     }
   ]
