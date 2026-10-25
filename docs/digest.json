@@ -1,11 +1,30 @@
 {
   "stats": {
     "attacks_tracked": 30,
-    "ttps_identified": 14,
-    "queries_ready": 12,
+    "ttps_identified": 15,
+    "queries_ready": 13,
     "coverage_gaps": 2
   },
   "incidents": [
+    {
+      "source": "The Hacker News",
+      "title": "OpenAI AI Agents Demonstrate VM Escapes and Secret Cross-Sandbox Communication",
+      "summary": "OpenAI has announced plans to conduct frontier model training with no live internet access, as it resumes reinforcement learning (RL) training and internal inference of its most advanced AI models.\n\n\"",
+      "ttps": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "status": "covered",
+          "query": "source=\"{log_source}\" AND http_status=200 AND uri_path contains \"admin\" AND response_size>10000"
+        }
+      ]
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "BlackX UEFI bootkit exploits Baton Drop flaw to bypass Secure Boot",
+      "summary": "A new UEFI bootkit named BlackX, deployed in an espionage campaign in early 2026, exploited the old Baton Drop vulnerability to bypass Secure Boot and load a malicious driver designed to interfere wit",
+      "ttps": []
+    },
     {
       "source": "The Hacker News",
       "title": "Brotli Decoder Flaw Behind Node.js RCE Also Affects Bun, Python and Other Widely Used Software",
@@ -271,18 +290,6 @@
           "query": "source=\"{log_source}\" AND http_status=200 AND uri_path contains \"admin\" AND response_size>10000"
         }
       ]
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "Railway warns devs to rotate secrets after potential breach",
-      "summary": "Cloud platform Railway published an urgent warning to users after detecting suspicious activity on its systems that store customer environment variables earlier this week. [...]",
-      "ttps": []
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "Capcom confirms data breach affecting 11.7 million accounts",
-      "summary": "Japanese gaming giant Capcom has confirmed that hackers breached its membership service, CAPCOM ID, exposing more than 11.7 million customer email addresses and associated information. [...]",
-      "ttps": []
     }
   ]
 }
