@@ -1,11 +1,90 @@
 {
   "stats": {
     "attacks_tracked": 30,
-    "ttps_identified": 4,
-    "queries_ready": 4,
+    "ttps_identified": 5,
+    "queries_ready": 5,
     "coverage_gaps": 0
   },
   "incidents": [
+    {
+      "source": "The Hacker News",
+      "title": "Chainalysis Confirms Intrusion Into Internal Tools and Exposure of Customer Identity Data",
+      "summary": "American blockchain analysis firm Chainalysis said it was the target of a cybersecurity incident in which an external actor accessed non-sensitive customer data.\n\nHowever, the company noted that the b",
+      "ttps": []
+    },
+    {
+      "source": "The Hacker News",
+      "title": "Attackers Chain Three Ivanti Connect Secure Flaws to Gain Unauthenticated Root Access",
+      "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Friday added two security flaws impacting Ivanti Connect Secure (ICS) to its Known Exploited Vulnerabilities (KEV) catalog, followin",
+      "ttps": []
+    },
+    {
+      "source": "The Hacker News",
+      "title": "A Shared ChatGPT Link Could Run Attacker Code in Your Session and Read Private Chats",
+      "summary": "A malicious ChatGPT share link could run an attacker's code in the logged-in session of anyone who opened it, allowing them to read their private conversations, researchers at&nbsp;the security firm P",
+      "ttps": []
+    },
+    {
+      "source": "The Hacker News",
+      "title": "Cloudflare Reports 18.2 Million Network-Layer DDoS Attacks in Q3, Up 38%",
+      "summary": "Threat actors are launching about 8,226 network-layer distributed denial-of-service (DDoS) attacks per hour, Cloudflare revealed Thursday.\n\nThe web infrastructure and security company said it autonomo",
+      "ttps": []
+    },
+    {
+      "source": "The Hacker News",
+      "title": "Chinese Hackers Use AI-Powered ARTEX to Target Over 200 Organizations Worldwide",
+      "summary": "Chinese state-sponsored threat actors have been observed using a Go-based artificial intelligence (AI)-powered penetration testing framework called ARTEX in attacks aimed at high-value targets simulta",
+      "ttps": []
+    },
+    {
+      "source": "The Hacker News",
+      "title": "TeamViewer Flaw Lets Remote Computers Attack Users Who Connect to Control Them",
+      "summary": "TeamViewer has fixed a flaw that lets the machine being controlled in a remote session attack the computer that connected to control it. In a TeamViewer session, the computer that connects and takes c",
+      "ttps": []
+    },
+    {
+      "source": "The Hacker News",
+      "title": "WordPress RCE Flaw Draws Nearly 63,000 Attack Attempts in Just 24 Hours",
+      "summary": "Threat actors have been observed attempting to exploit a high-severity security flaw in WordPress Core shortly after patches were released.\n\nThe vulnerability, which does not have a CVE identifier, re",
+      "ttps": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "status": "covered",
+          "query": "source=\"{log_source}\" AND http_status=200 AND uri_path contains \"admin\" AND response_size>10000"
+        }
+      ]
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "Reddit to lock content behind logins to fight scrapers",
+      "summary": "Reddit announced in a post by co-founder Steve Huffman that the site will gradually become a \"logged-in service,\" offering limited access to visitors without accounts. [...]",
+      "ttps": []
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "From Beginner to Bug Hunter: Learning Cybersecurity in the AI Era.",
+      "summary": "[...]",
+      "ttps": []
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "Chainalysis discloses data breach from \"offensive agentic techniques\"",
+      "summary": "Blockchain analytics firm Chainalysis disclosed a data breach after attackers used \"offensive agentic techniques\" to access internal systems and tools, exposing customer names, email addresses, user I",
+      "ttps": []
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "Critical Linux kernel flaw allows remote root attacks on MPTCP servers",
+      "summary": "Security researchers at Anthropic have developed an exploit for a critical Linux kernel vulnerability that allows unauthenticated attackers to remotely execute commands as root on servers running Mult",
+      "ttps": []
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "Trezor warns of suspected crypto-theft implant in hardware wallet",
+      "summary": "Hardware wallet device maker Trezor has received credible reports about a suspected hardware crypto-theft implant in a Trezor Safe 5 sold by its reseller CryptoBilis in Southeast Asia. [...]",
+      "ttps": []
+    },
     {
       "source": "The Hacker News",
       "title": "Trezor Warns of Suspected Hardware Implant in One of Its Wallets Sold by CryptoBilis",
@@ -140,78 +219,6 @@
       "source": "BleepingComputer",
       "title": "Binance probes potential $5.8 billion crypto-theft hack",
       "summary": "Cryptocurrency exchange Binance is investigating a potential security breach involving up to $5.8 billion in digital assets, in what could become the largest cryptocurrency hack in history. [...]",
-      "ttps": []
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "Hugging Face malware campaign returns to hijack GPUs for crypto mining",
-      "summary": "A crypto-mining campaign abusing Hugging Face models returned days after takedown, hijacking GPU servers and planting backdoors, with one model downloaded over 28,000 times. Separately, a fake Solana ",
-      "ttps": []
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "Japan Airlines suffers third-party data breach exposing passenger info",
-      "summary": "Japan Airlines (JAL) has announced that a data breach at Amadeus's Passenger Service System exposed the data of about 92,000 customers. [...]",
-      "ttps": []
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "Polymarket halts trading after crypto-draining script breach, $2.5M traced",
-      "summary": "Prediction market platform Polymarket temporarily suspended trading on Thursday after hackers compromised a third-party service to distribute cryptocurrency-draining JavaScript, with approximately $2.",
-      "ttps": []
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "Fake crypto app on Apple App Store linked to $23K wallet theft",
-      "summary": "A fake cryptocurrency trading app called Padre Terminal, previously available on the Apple App Store for iOS devices, has been linked to the theft of approximately $23,000 from 27 Solana wallets. [...",
-      "ttps": []
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "Hackers exploit Cisco SD-WAN flaw to deploy custom KeyDrift malware",
-      "summary": "A newly identified advanced persistent threat (APT) group tracked as UAT-11473 was observed exploiting CVE-2026-20127, an authentication-bypass flaw in Cisco Catalyst SD-WAN Controllers, to deploy a c",
-      "ttps": []
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "Chrome extensions with 13.4 million installs caught hijacking searches",
-      "summary": "A massive search-hijacking campaign involving 319 Chrome extensions with a combined 13.4 million reported installations redirected users' searches through tracking servers to generate advertising reve",
-      "ttps": []
-    },
-    {
-      "source": "The Hacker News",
-      "title": "Google's Gemini 4 Carbon Leads Benchmarks for Finding, Exploiting, and Patching Vulnerabilities",
-      "summary": "Google on Wednesday took the wraps off Gemini 4 Carbon, its latest frontier model with state-of-the-art cybersecurity and long-horizon capabilities.\n\n\"It shows significant gains across coding and agen",
-      "ttps": []
-    },
-    {
-      "source": "The Hacker News",
-      "title": "Telegram Android Flaw Lets Attackers Run Code When Users Answer Voice Calls",
-      "summary": "A flaw in Telegram for Android allowed an attacker to run code on a victim's phone via a voice call once the victim answered, according to security startup NebuSec.\n\nThe attacker needed only an ordina",
-      "ttps": []
-    },
-    {
-      "source": "The Hacker News",
-      "title": "The Rise of the Threat Operator: How AI Will Redefine Security Operations and Careers",
-      "summary": "AI is beginning to take over much of the work that has traditionally defined the security analyst's job. Investigating alerts, collecting evidence, correlating activity across tools, and executing res",
-      "ttps": []
-    },
-    {
-      "source": "The Hacker News",
-      "title": "26,400 Valid Cloud and AI Credentials Found Exposed in Public Gitee Repositories",
-      "summary": "26,400 credentials that developers left in public code on Gitee, a Chinese code-hosting service, still worked when a researcher tested them. Anyone who copied one from that code could have used it.\n\nI",
-      "ttps": []
-    },
-    {
-      "source": "The Hacker News",
-      "title": "Cisco Patches Actively Exploited ASA and FTD VPN Flaw That Can Crash Firewalls",
-      "summary": "Cisco has released patches to address a high-severity security flaw in Secure Firewall Adaptive Security Appliance (ASA) Software and Secure Firewall Threat Defense (FTD) Software that it said has bee",
-      "ttps": []
-    },
-    {
-      "source": "The Hacker News",
-      "title": "GitHub Launches npm Firewall to Block Malicious Packages Before Installation",
-      "summary": "GitHub has announced that it's introducing a new package firewall as a preview to block installation of suspicious npm packages during installation time.\n\n\"The firewall inspects both metadata requests",
       "ttps": []
     }
   ]
