@@ -1,11 +1,53 @@
 {
   "stats": {
     "attacks_tracked": 30,
-    "ttps_identified": 5,
-    "queries_ready": 5,
+    "ttps_identified": 3,
+    "queries_ready": 3,
     "coverage_gaps": 0
   },
   "incidents": [
+    {
+      "source": "The Hacker News",
+      "title": "CVSS 10.0 LXD, MicroCloud Flaw Lets Attackers Impersonate Trusted Clients Without a Private Key",
+      "summary": "A critical flaw in Canonical's LXD and MicroCloud let an attacker log in as a trusted client without holding that client's private key. To do it, the attacker had to reach their HTTPS API over the net",
+      "ttps": []
+    },
+    {
+      "source": "The Hacker News",
+      "title": "Hackers Steal About $2.7 Million From Polymarket Traders via Hijacked DebugBear Script",
+      "summary": "Malicious code on the website of prediction market Polymarket sold some signed-in traders' positions and moved their funds to the hackers on October 29. The code had replaced a page-speed script that ",
+      "ttps": []
+    },
+    {
+      "source": "The Hacker News",
+      "title": "FBI Links North Korea's TraderTraitor to Record $6.43 Billion Binance Crypto Heist",
+      "summary": "The U.S. Federal Bureau of Investigation (FBI) has officially attributed the theft of more than $6 billion in virtual assets to TraderTraitor, a North Korea-aligned elite hacking group also tracked as",
+      "ttps": []
+    },
+    {
+      "source": "The Hacker News",
+      "title": "NetamLoader Malware Targets Government Windows 10 Systems in Asia via .NET Injection",
+      "summary": "Cybersecurity researchers have disclosed details of what has been described as a \"highly sophisticated infection chain\" targeting government organizations in Asia.\n\nThe activity, detailed by Kaspersky",
+      "ttps": []
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "OpenAI says it's doubling Pro usage limits and bringing Work features to Chat",
+      "summary": "OpenAI has just confirmed that it's rolling out ChatGPT Work capabilities directly into regular Chat, while also combining usage allowances across ChatGPT and Codex. [...]",
+      "ttps": []
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "Northflank security breach leads to abuse of customers' AI API keys",
+      "summary": "Cloud application hosting platform Northflank is warning customers to rotate all credentials and secrets stored on its platform after a security breach led to unauthorized use of customers' AI API key",
+      "ttps": []
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "New Android SMS of Death exploit can remotely crash unpatched phones",
+      "summary": "A security researcher has released a proof-of-concept exploit for a recently patched Android vulnerability, dubbed \"SMS of Death\" and tracked as CVE-2026-58882, that lets attackers remotely disrupt ce",
+      "ttps": []
+    },
     {
       "source": "The Hacker News",
       "title": "Chainalysis Confirms Intrusion Into Internal Tools and Exposure of Customer Identity Data",
@@ -163,62 +205,6 @@
       "source": "BleepingComputer",
       "title": "Malicious Claude Code extension on Cursor planted SSH backdoors",
       "summary": "A malicious version of Anthropic's Claude Code VS Code extension was distributed through Cursor's extension marketplace for approximately 11 hours on October 29, exposing up to 5,000 developers to mal",
-      "ttps": []
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "SS7 and Diameter Attacks: How Signaling Flaws Expose Your Phone",
-      "summary": "Flaws in SS7 and Diameter signaling protocols can allow attackers to track phone locations, intercept calls and SMS verification codes, and impersonate subscribers without compromising their devices. ",
-      "ttps": [
-        {
-          "id": "T1190",
-          "name": "Exploit Public-Facing Application",
-          "status": "covered",
-          "query": "source=\"{log_source}\" AND http_status=200 AND uri_path contains \"admin\" AND response_size>10000"
-        }
-      ]
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "CISA says max severity GitLab flaw now exploited in the wild",
-      "summary": "Attackers have started exploiting a maximum-severity GitLab vulnerability patched earlier this month, according to the US Cybersecurity and Infrastructure Security Agency (CISA). [...]",
-      "ttps": []
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "Microsoft finally fixes VPN issues caused by September updates",
-      "summary": "Microsoft has resolved Always On VPN connection failures triggered after installing the September 2026 Windows 11 security updates. [...]",
-      "ttps": []
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "Drupal warns of critical Commerce Core flaw exploited in attacks",
-      "summary": "Drupal warned admins to patch a critical access bypass vulnerability in the Commerce Core module that attackers are exploiting in the wild. [...]",
-      "ttps": [
-        {
-          "id": "T1190",
-          "name": "Exploit Public-Facing Application",
-          "status": "covered",
-          "query": "source=\"{log_source}\" AND http_status=200 AND uri_path contains \"admin\" AND response_size>10000"
-        }
-      ]
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "Binance links $6.3 billion crypto theft to compromised DevOps laptop",
-      "summary": "Binance, the world's largest crypto exchange, has linked the theft of about $6.3 billion in cryptocurrency to a DevOps engineer's compromised laptop. [...]",
-      "ttps": []
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "OpenAI doubles ChatGPT Pro usage limits after backlash over planned 50% cut",
-      "summary": "OpenAI says it won't reduce usage limits for the $100, $200, and $500 ChatGPT Pro plans, as well as Business Premium, and it also promised to keep Dots usage independent. [...]",
-      "ttps": []
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "Binance probes potential $5.8 billion crypto-theft hack",
-      "summary": "Cryptocurrency exchange Binance is investigating a potential security breach involving up to $5.8 billion in digital assets, in what could become the largest cryptocurrency hack in history. [...]",
       "ttps": []
     }
   ]
