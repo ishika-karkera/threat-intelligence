@@ -1,11 +1,178 @@
 {
   "stats": {
     "attacks_tracked": 30,
-    "ttps_identified": 13,
-    "queries_ready": 11,
-    "coverage_gaps": 2
+    "ttps_identified": 11,
+    "queries_ready": 8,
+    "coverage_gaps": 3
   },
   "incidents": [
+    {
+      "source": "The Hacker News",
+      "title": "APT29-Linked Hackers Hijack Web Analytics Script to Deliver iOS and Android Exploits",
+      "summary": "The Russia-linked threat actor known as APT29 is said to be behind a large-scale watering hole campaign targeting iOS and Android users through compromised websites, fake domains, and a supply chain a",
+      "ttps": []
+    },
+    {
+      "source": "The Hacker News",
+      "title": "Critical Rails Flaw Lets Attackers Write Server Files via Crafted ImageMagick Uploads",
+      "summary": "A critical flaw in Ruby on Rails could allow an unauthenticated attacker to write arbitrary files on an app's server by uploading a crafted file if the app processes uploads using ImageMagick. The Rai",
+      "ttps": []
+    },
+    {
+      "source": "The Hacker News",
+      "title": "Xen Hypervisor Flaws Let One Malicious VM Read and Write Any Other VM's Memory",
+      "summary": "Two flaws in the Xen hypervisor allow a malicious guest virtual machine (VM) to read and write the memory of other VMs on the same host, including dom0.\n\nDom0 is the VM that, by default, has full perm",
+      "ttps": []
+    },
+    {
+      "source": "The Hacker News",
+      "title": "Radio With No Radar: Why Agent Runtime Security Fails Without the Layers Beneath It",
+      "summary": "Nearly every agent security pitch now ends on the same promise: the product stops the bad action in real time. The promise holds for one kind of agent, the kind whose traffic passes through a gateway ",
+      "ttps": []
+    },
+    {
+      "source": "The Hacker News",
+      "title": "China-Aligned Hackers Hijack Sogou Input Method DNS Requests to Deploy DarkVigil Backdoor",
+      "summary": "A China-aligned threat actor known as SlippyNunchucks has been attributed to a Domain Name System (DNS) hijacking operation abusing insecure HTTP communications in Windows versions of Sogou Input Meth",
+      "ttps": []
+    },
+    {
+      "source": "The Hacker News",
+      "title": "Russian Police Arrest 3 Suspected VasyGrek Hackers, Dismantle Criminal Infrastructure",
+      "summary": "Russian authorities have arrested three suspected members of a threat group known as VasyGrek and dismantled its criminal infrastructure.\n\nAlso known as Fluffy Wolf, the threat actor has a history of ",
+      "ttps": []
+    },
+    {
+      "source": "The Hacker News",
+      "title": "Google Issues Patches for Critical Android Flaw That Could Allow RCE Without User Interaction",
+      "summary": "A critical Android flaw could allow an attacker to run code on a phone without any user action remotely, Google said in its&nbsp;November security bulletin.\n\nThe flaw, CVE-2026-58868, affects Android ",
+      "ttps": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "status": "covered",
+          "query": "source=\"{log_source}\" AND http_status=200 AND uri_path contains \"admin\" AND response_size>10000"
+        }
+      ]
+    },
+    {
+      "source": "The Hacker News",
+      "title": "CISA Confirms Hackers Exploiting WordPress Core Flaw During Software Upgrades",
+      "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) has added a security flaw in WordPress Core to the Known Exploited Vulnerabilities (KEV) catalog, citing evidence of active exploitatio",
+      "ttps": []
+    },
+    {
+      "source": "The Hacker News",
+      "title": "mSecure Warns Users to Change Passwords, Reset 2FA and Passkeys After Suspicious Activity",
+      "summary": "Customers of the mSecure password manager are being urged to act now to protect the confidential information they store in it, possibly by changing passwords, resetting two-factor authentication (2FA)",
+      "ttps": []
+    },
+    {
+      "source": "The Hacker News",
+      "title": "Chainstack Reports Production Systems Breach Exposing Customer Data and Password Hashes",
+      "summary": "Blockchain infrastructure provider Chainstack on Tuesday disclosed that it was targeted in a cyber attack that allowed an unauthorized party to gain access to some parts of its infrastructure.\n\nThe in",
+      "ttps": []
+    },
+    {
+      "source": "The Hacker News",
+      "title": "Binance Reveals How Fake Job Interviews and AI Tool Abuse Led to $6.43 Billion Theft",
+      "summary": "Binance on Tuesday said the record-setting theft of $6.43 billion in assets from the world's largest cryptocurrency exchange was the culmination of a \"sophisticated, multi-stage campaign\" that involve",
+      "ttps": [
+        {
+          "id": "T1566",
+          "name": "Unknown",
+          "status": "gap",
+          "query": ""
+        }
+      ]
+    },
+    {
+      "source": "The Hacker News",
+      "title": "Barracuda Flaws Could Be Chained to Bypass Authorization and Gain Root Access",
+      "summary": "Barracuda has disclosed details of two vulnerabilities affecting its products that, if chained together, could allow an attacker to bypass authorization controls and gain root access to a susceptible ",
+      "ttps": [
+        {
+          "id": "T1059",
+          "name": "Command and Scripting Interpreter",
+          "status": "covered",
+          "query": "source=\"{log_source}\" AND process_name in (\"cmd.exe\",\"powershell.exe\",\"bash\") AND parent_process=\"webserver\""
+        }
+      ]
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "mSecure password manager hack prompts password reset warnings",
+      "summary": "mSeven Software is warning current and former mSecure password manager\u00a0customers to change passwords, reset two-factor authentication, and remove passkeys following a cyberattack that reportedly expos",
+      "ttps": []
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "Google Calendar phishing campaign hijacks sessions, bypasses MFA",
+      "summary": "A phishing campaign used Google Calendar invites, trusted redirects, and fake login pages to hijack corporate Google sessions and bypass MFA protections. Material Security examines how Operation Cloud",
+      "ttps": [
+        {
+          "id": "T1566",
+          "name": "Unknown",
+          "status": "gap",
+          "query": ""
+        }
+      ]
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "SonicWall warns of unpatched flaws in end-of-life GMS software",
+      "summary": "SonicWall warned customers of two security flaws affecting end-of-life Global Management System (GMS) systems that will not be patched. [...]",
+      "ttps": []
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "US charges two Canadians accused of hacking US universities",
+      "summary": "A federal grand jury indicted two Canadians suspected of hacking multiple US universities and using the compromised systems to mine for cryptocurrency. [...]",
+      "ttps": []
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "CISA flags WordPress RCE flaw as actively exploited in attacks",
+      "summary": "The US Cybersecurity and Infrastructure Security Agency (CISA) warned federal agencies that attackers have started exploiting a recently patched high-severity WordPress vulnerability in the wild. [...",
+      "ttps": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "status": "covered",
+          "query": "source=\"{log_source}\" AND http_status=200 AND uri_path contains \"admin\" AND response_size>10000"
+        }
+      ]
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "Hackers use n-day exploits in zero-click attacks on iOS, Android devices",
+      "summary": "A large-scale watering hole attack associated with Russian hackers has been targeting iOS and Android users visiting compromised sites or fake ones impersonating legitimate portals. [...]",
+      "ttps": []
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "Hackers hijack cPGuard autoupdate to deploy backdoor, steal data",
+      "summary": "Attackers have compromised the update infrastructure for the cPGuard web security suite to distribute a backdoor and a data-stealing script. [...]",
+      "ttps": []
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "WorkOS says attacker used ARTEX AI to breach internal sales app",
+      "summary": "Developer platform WorkOS suffered a data breach after a threat actor accessed business contact records and summaries of customer communications. [...]",
+      "ttps": []
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "Binance says fake job interview led to $6.3 billion crypto heist",
+      "summary": "Cryptocurrency exchange Binance says North Korean hackers used a fake job interview to trick an employee into installing malware that ultimately let them compromise the company's wallet infrastructure",
+      "ttps": []
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "Google: LLMjacking attacks rack up $1 million in cloud AI charges",
+      "summary": "Large language model hijacking attacks, also known as\u00a0LLMjacking, are generating large fraudulent cloud charges, with some organizations losing more than $100,000 per day. [...]",
+      "ttps": []
+    },
     {
       "source": "The Hacker News",
       "title": "Google Warns LLMjacking Attacks Are Costing Some Enterprises Up to $1 Million in Cloud Charges",
@@ -93,187 +260,6 @@
       "source": "The Hacker News",
       "title": "New Wave of Refrigeration Cyberattacks Hits Supermarkets Across Europe, Forcing Stores to Pull Food",
       "summary": "Attackers remotely changed the settings on refrigeration controls at supermarkets in Belgium, Sweden, Estonia and other European countries overnight into Monday, November 2, warming fridges and freeze",
-      "ttps": []
-    },
-    {
-      "source": "The Hacker News",
-      "title": "Attackers Exploit Critical Siemens IoT2050 Flaw to Plant Remote Command Backdoors",
-      "summary": "A maximum-severity security flaw impacting Siemens SIMATIC IoT2050 Advanced devices has come under active exploitation, VulnCheck has revealed.\n\nThe vulnerability, tracked as CVE-2026-58115 (CVSS scor",
-      "ttps": []
-    },
-    {
-      "source": "The Hacker News",
-      "title": "Attackers Target Unpatched CryptoPayment Gateway Flaw That Can Expose Wallet Credentials",
-      "summary": "Threat actors are attempting to exploit an unpatched maximum-severity security vulnerability in the CryptoPayment Gateway WordPress plugin, according to findings from Defused Cyber.\n\nThe vulnerability",
-      "ttps": []
-    },
-    {
-      "source": "The Hacker News",
-      "title": "\u26a1 Weekly Recap: Critical CVEs, Linux DDoS Botnet, Device-Code Phishing, Android Spyware and More",
-      "summary": "Some attacks this week didn't need much of a trick. A fake support call, a trusted extension, a shared link, or a device with no password. Small things that people barely think about. Yet each was eno",
-      "ttps": [
-        {
-          "id": "T1566",
-          "name": "Unknown",
-          "status": "gap",
-          "query": ""
-        }
-      ]
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "Barracuda warns of critical flaws allowing root access to devices",
-      "summary": "Cybersecurity company Barracuda Networks warned customers to patch two vulnerabilities that can let attackers run commands with root privileges. [...]",
-      "ttps": []
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "Gartner Predicts SOCs Will Have 50% More Engineers Than Analysts by 2028",
-      "summary": "Gartner predicts that security operations centers will have 50% more engineers than analysts by 2028 as AI agents take over routine alert handling. Prophet Security examines how AI is reshaping SOC ro",
-      "ttps": []
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "UK school estate hit by 3AM ransomware in suspected AI-assisted attack",
-      "summary": "A 3AM ransomware affiliate targeted a school estate in the UK and successfully encrypted around 37 of nearly 50 machines reached from an unmanaged host. [...]",
-      "ttps": [
-        {
-          "id": "T1486",
-          "name": "Data Encrypted for Impact (Ransomware)",
-          "status": "covered",
-          "query": "source=\"{log_source}\" AND event_type=\"file_modify\" AND file_extension in (\".locked\",\".encrypted\") AND file_count_per_min>50"
-        }
-      ]
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "Police seizes over 100 servers in investment scam crackdown",
-      "summary": "European law enforcement authorities arrested seven suspects and seized more than 100 servers in a joint action targeting an unnamed company suspected of providing fraudulent trading websites to crimi",
-      "ttps": [
-        {
-          "id": "T1190",
-          "name": "Exploit Public-Facing Application",
-          "status": "covered",
-          "query": "source=\"{log_source}\" AND http_status=200 AND uri_path contains \"admin\" AND response_size>10000"
-        }
-      ]
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "Google adds new $250,000 Cloud VRP reward for Root-in-Cloud bugs",
-      "summary": "Google has expanded its Cloud Vulnerability Reward Program (VRP) with a new top-tier reward for high-impact architectural security flaws. [...]",
-      "ttps": []
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "Harvard University data breach exposed info of 851,000 accounts",
-      "summary": "Hackers who breached Harvard University's Alumni Affairs and Development systems in November 2025 stole data linked to more than 850,000 unique email addresses, according to breach notification servic",
-      "ttps": []
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "Chinese hackers use ARTEX AI in automated attacks against 200 orgs",
-      "summary": "Chinese hackers used ARTEX, an open-source, multi-agent AI penetration-testing framework, in attacks against more than 200 organizations across 14 countries. [...]",
-      "ttps": [
-        {
-          "id": "T1190",
-          "name": "Exploit Public-Facing Application",
-          "status": "covered",
-          "query": "source=\"{log_source}\" AND http_status=200 AND uri_path contains \"admin\" AND response_size>10000"
-        }
-      ]
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "Fintech platform Sageworks taken offline after suspected cyberattack",
-      "summary": "Financial technology company Abrigo has restored its Sageworks risk management application, except for borrower-facing capabilities, following an outage triggered by \"irregular activity\" in its enviro",
-      "ttps": []
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "Google disrupts million-device XCPE Android malware botnet, bans TV box maker",
-      "summary": "Google and industry partners have dismantled the XCPE malware botnet consisting of more than 1.3 million Android TV streaming TV boxes that Google says its manufacturer intentionally infected with mal",
-      "ttps": []
-    },
-    {
-      "source": "Krebs on Security",
-      "title": "Tech Firms Dismantle Botnet That Turned 1.3M TV Boxes Into Proxies",
-      "summary": "Google said today it worked with industry partners to dismantle a botnet made up of more than 1.3 million Android TV set-top boxes that ship with malicious software which secretly rents the user's Int",
-      "ttps": []
-    },
-    {
-      "source": "The Hacker News",
-      "title": "Google Disrupts 1.3 Million-Device Android Botnet, Says TV Box Maker Sold Criminal Access",
-      "summary": "A botnet of more than 1.3 million Android devices, mostly TV set-top boxes, lost control of its servers in late October in a takedown led by Google.\n\nGoogle says&nbsp;it is highly confident that devic",
-      "ttps": []
-    },
-    {
-      "source": "The Hacker News",
-      "title": "DarkBlinders Compromises Israeli Target and Iraqi Kurdish Government Cloud Environment",
-      "summary": "Cybersecurity researchers have disclosed details of a cyber espionage campaign targeting Israel and the Kurdistan Region of Iraq by an Iran state-aligned threat actor between August and October 2026.\n",
-      "ttps": []
-    },
-    {
-      "source": "The Hacker News",
-      "title": "Critical Langflow Flaws Could Let Unauthenticated Attackers Run Code on Servers",
-      "summary": "Two critical flaws in Langflow could let a remote attacker with no account bypass authentication or run arbitrary code,&nbsp;IBM said last week.\n\nLangflow is an open-source tool for building AI agents",
-      "ttps": [
-        {
-          "id": "T1190",
-          "name": "Exploit Public-Facing Application",
-          "status": "covered",
-          "query": "source=\"{log_source}\" AND http_status=200 AND uri_path contains \"admin\" AND response_size>10000"
-        }
-      ]
-    },
-    {
-      "source": "The Hacker News",
-      "title": "Is Your SOC Ready for AI Agents? A Maturity Check Before You Deploy",
-      "summary": "Forty percent of security teams now use AI every day, and another 56% are testing it. Only 4% have no plans to adopt it, according to Prophet Security's State of AI in Security Operations 2026 survey ",
-      "ttps": [
-        {
-          "id": "T1190",
-          "name": "Exploit Public-Facing Application",
-          "status": "covered",
-          "query": "source=\"{log_source}\" AND http_status=200 AND uri_path contains \"admin\" AND response_size>10000"
-        }
-      ]
-    },
-    {
-      "source": "The Hacker News",
-      "title": "Attackers Pose as IT Support on Microsoft Teams, Abuse AD CS to Steal Company Data",
-      "summary": "Attackers posing as IT support on Microsoft Teams talked employees into giving them remote control of their PCs. They then used insecure Active Directory Certificate Services (AD CS) settings to obtai",
-      "ttps": []
-    },
-    {
-      "source": "The Hacker News",
-      "title": "Government Linux Servers Targeted With SysGoRAT and Suspected AI-Generated Scripts",
-      "summary": "Cybersecurity researchers have disclosed details of a cyber espionage campaign specifically targeting Linux infrastructure associated with government entities and state-affiliated infrastructure.\n\nThe",
-      "ttps": []
-    },
-    {
-      "source": "The Hacker News",
-      "title": "New VOLTA Infostealer Uses Claude, Gemini, and Kimi AI to Rank Victims by Financial Value",
-      "summary": "Cybersecurity researchers have discovered a new Windows infostealer malware called VOLTA-AUTODOXER (aka VOLTA) that makes use of a large language model (LLM) to rank a victim's stolen data by their mo",
-      "ttps": []
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "BTCPay Server warns of hot wallet crypto thefts on outdated instances",
-      "summary": "The maintainer of BTCPay Server, an open-source cryptocurrency payment processor, has urged users to install the latest version as hackers have been draining \"hot wallets\" on instances running older v",
-      "ttps": [
-        {
-          "id": "T1190",
-          "name": "Exploit Public-Facing Application",
-          "status": "covered",
-          "query": "source=\"{log_source}\" AND http_status=200 AND uri_path contains \"admin\" AND response_size>10000"
-        }
-      ]
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "Your Mobile Carrier Stores Your Call Logs for Years",
-      "summary": "Mobile carriers can retain years of call and text metadata, exposing sensitive details about customers' relationships, locations, and daily routines if breached. Cape examines the privacy risks of lon",
       "ttps": []
     }
   ]
