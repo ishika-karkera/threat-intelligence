@@ -1,11 +1,17 @@
 {
   "stats": {
     "attacks_tracked": 30,
-    "ttps_identified": 6,
-    "queries_ready": 4,
+    "ttps_identified": 5,
+    "queries_ready": 3,
     "coverage_gaps": 2
   },
   "incidents": [
+    {
+      "source": "BleepingComputer",
+      "title": "Hackers pull off $133 million French bank heist via service provider",
+      "summary": "French cooperative bank Cr\u00e9dit Mutuel Ark\u00e9a was targeted in a cyberattack that enabled fraudulent transactions of up to $133 million, forcing it to respond by suspending certain systems.v [...]",
+      "ttps": []
+    },
     {
       "source": "The Hacker News",
       "title": "Claude Code's \u201cDon't Ask Again\u201d File Exposes Passwords and Keys in 1,122 Public Copies on GitHub",
@@ -213,19 +219,6 @@
       "title": "Hackers backdoor Linux servers using trojanized CWP web server",
       "summary": "A new Linux malware called CWPdoor is being distributed through a trojanized version of cwpsrv, the web server behind the Control Web Panel (CWP) management interface. [...]",
       "ttps": []
-    },
-    {
-      "source": "The Hacker News",
-      "title": "ThreatsDay: Apache OFBiz RCE, DreamHost Breach, DeFi Site Hijacks + 17 More Stories",
-      "summary": "How much damage can someone do without breaking much? Quite a lot, it seems. A stolen login can open doors across several systems. A trusted setting can be used to lock people out. Even a simple file ",
-      "ttps": [
-        {
-          "id": "T1190",
-          "name": "Exploit Public-Facing Application",
-          "status": "covered",
-          "query": "source=\"{log_source}\" AND http_status=200 AND uri_path contains \"admin\" AND response_size>10000"
-        }
-      ]
     }
   ]
 }
